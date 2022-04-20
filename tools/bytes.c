@@ -1,7 +1,13 @@
 #include <stdio.h>
 #include <ctype.h>
 
-// This is the source code for the bytes utility stored in ~/CMSC/tools
+/*
+Acknowledgement:
+
+This utility is courtesy of Dr. Adam Shaw, provided during CMSC 15200 in Winter
+quarter of 2022 at the University of Chicago.
+ 
+ */
 
 // display a file one byte at a time
 int main(int argc, char *argv[])
