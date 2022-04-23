@@ -1,0 +1,10 @@
+#ignore a.out files
+*.out
+cta.csv
+.DS_Store
+*.dSYM
+test_strlist
+wordle
+*.ppm
+bytes
+ishow
