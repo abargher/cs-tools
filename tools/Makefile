@@ -1,6 +1,8 @@
 CC = clang
 CFLAGS = -O0 -Wall
 
+.PHONY = clean
+
 all: ishow bytes
 
 ishow: ishow.c
