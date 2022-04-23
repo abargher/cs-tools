@@ -1,3 +1,0 @@
-#!/bin/zsh
-echo "#include <stdio.h>\n#include <stdlib.h>\n\n" > $1
-vim -c +4 $1

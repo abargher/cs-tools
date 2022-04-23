@@ -1,0 +1,2 @@
+export PATH=$PATH:/mnt/e/CMSC/cs-tools/tools:/mnt/e/CMSC/cs-tools/scripts-bash
+alias scrs="cd /mnt/e/CMSC/cs-tools/scripts-bash"
