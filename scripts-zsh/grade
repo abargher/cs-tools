@@ -1,0 +1,10 @@
+#!/bin/zsh
+
+# this script was written specifically for use on my Macbook Pro. I plan to
+# make this script more general purpose in the future, maybe with some
+# more arguments, but otherwise, this is not intended for use on other machines.
+HW=$1
+CNET=$2
+mv ~/Downloads/$HW-$CNET.rkt ~/CMSC/g-cs151-s22/$HW/$HW-$CNET.rkt
+cat ~/CMSC/g-cs151-s22/$HW/tests-$HW.txt >> ~/CMSC/g-cs151-s22/$HW/$HW-$CNET.rkt
+echo $CNET >> ~/CMSC/g-cs151-s22/$HW/students.txt
