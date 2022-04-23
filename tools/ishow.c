@@ -76,7 +76,7 @@ char *get_binary_string(unsigned uf)
 void show_int(unsigned uf)
 {
     char *bin = get_binary_string(uf);
-    printf("Hex = 0x%.8x,\tSigned = %d,\tUnsigned = %u,\tBinary = %s\n",
+    printf("Hex = 0x%.8x,  Signed = %d,  Unsigned = %u,\nBinary = %s\n",
            uf,(int)uf,uf,bin);
     free(bin);
 }
