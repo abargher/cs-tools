@@ -8,6 +8,9 @@ assistive tool.
 Thank you to Madison Pickering (Project 1 TA), Prof. Yanjing Li, and
 Prof. Junchen Jiang for providing this source code.
 
+I have added in the binary string functionality, the original tool did not
+display numbers in binary format.
+
 The included Project 1 Makefile originally compiled this program as follows:
     gcc -O0 -Wall -o ishow ishow.c
 
