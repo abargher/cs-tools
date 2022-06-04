@@ -5,6 +5,6 @@
 # more arguments, but otherwise, this is not intended for use on other machines.
 HW=$1
 CNET=$2
-mv ~/Downloads/$HW-$CNET.rkt ~/CMSC/g-cs151-s22/$HW/$HW-$CNET.rkt
-cat ~/CMSC/g-cs151-s22/$HW/tests-$HW.txt >> ~/CMSC/g-cs151-s22/$HW/$HW-$CNET.rkt
-echo $CNET >> ~/CMSC/g-cs151-s22/$HW/students.txt
+mv ~/Downloads/$HW-$CNET.rkt ~/CMSC/grading/cs151-su22/$HW/$HW-$CNET.rkt
+cat ~/CMSC/grading/cs151-su22/$HW/tests-$HW.txt >> ~/CMSC/grading/cs151-su22/$HW/$HW-$CNET.rkt
+echo $CNET >> ~/CMSC/grading/cs151-su22/$HW/students.txt
