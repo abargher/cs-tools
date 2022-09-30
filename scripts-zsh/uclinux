@@ -1,2 +1,2 @@
 #!/bin/zsh
-ssh -t abargher@linux.cs.uchicago.edu 'cd Documents/CMSC/cs154/abargher; exec $SHELL -l'
+ssh -t abargher@linux.cs.uchicago.edu 'cd Documents/CMSC/; exec $SHELL -l'
