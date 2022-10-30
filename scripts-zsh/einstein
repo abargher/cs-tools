@@ -1,0 +1,2 @@
+#!/bin/zsh
+ssh -t alec@$EINSTEIN_IP 'udisksctl mount -b /dev/nvme0n1p1; cd /media/alec/Storage/CMSC; exec $SHELL -l'

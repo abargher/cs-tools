@@ -1,5 +1,8 @@
 export PATH=$PATH:~/cmsc/cs-tools/tools:~/cmsc/cs-tools/scripts-zsh
+export EINSTEIN_IP=128.135.114.198
 alias scrs="cd ~/CMSC/cs-tools/scripts-zsh"
 alias cs154="cd ~/CMSC/cs154/abargher"
+alias cs233="cd ~/CMSC/cs23320"
 alias cmsc="cd ~/CMSC/"
+alias python="python3"
 export CLICOLOR=1
