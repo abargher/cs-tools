@@ -1,0 +1,9 @@
+filetype on
+filetype plugin on
+set tabstop=4
+set shiftwidth=4
+set expandtab
+autocmd FileType make set tabstop=8 shiftwidth=8 softtabstop=0 noexpandtab
+syntax on
+set number
+set colorcolumn=81
