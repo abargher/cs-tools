@@ -1,3 +1,3 @@
 #!/bin/bash
 sudo python3 $STORAGE_PATH/CMSC/cs-tools/tools/refind-next-boot.py 'Microsoft'
-systemctl reboot
+sudo reboot now
