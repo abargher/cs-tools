@@ -1,6 +1,5 @@
 #!/bin/bash
-echo "Would you like to reboot to Windows? (y/n): "
-read response
+read -N 1 -p "Would you like to reboot to Windows? (y/n): " response
 
 if [ $response == "y" ]
 then
