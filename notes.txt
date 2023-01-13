@@ -1,0 +1,2 @@
+run on Ubuntu to fix dualbooting time error:
+timedatectl set-local-rtc 1
