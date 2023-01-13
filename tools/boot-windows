@@ -1,3 +1,11 @@
 #!/bin/bash
+read -N 1 -p "Would you like to reboot to Windows? (y/n): " response
+
+if [ $response == "y" ]
+then
 sudo python3 $STORAGE_PATH/CMSC/cs-tools/tools/refind-next-boot.py 'Microsoft'
 sudo reboot now
+else
+echo "Reboot cancelled."
+exit
+fi
