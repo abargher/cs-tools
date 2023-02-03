@@ -6,6 +6,6 @@ then
 sudo python3 $STORAGE_PATH/CMSC/cs-tools/tools/refind-next-boot.py 'Microsoft'
 sudo reboot now
 else
-echo "Reboot cancelled."
+printf "\nReboot cancelled.\n"
 exit
 fi
