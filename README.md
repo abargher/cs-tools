@@ -8,11 +8,12 @@ This repository contains various configuration files, shell scripts, shortcuts, 
   * `vimrc`: My Vim configuration file, copied to every machine.
 
 `scripts-*`:
-  * `einstein`: A shortcut to SSH into my desktop
+  * `einstein`: A shortcut to SSH into my desktop.
   * `gitacp`: A shortcut to add, commit, and push a given file and commit message with `git`.
-  * `new_c`: A shortcut to create a new, .c file with the standard include statements and open it in Vim.
+  * `new_c`: A shortcut to create a new .c file with the standard include statements and open it in Vim.
   * `uclinux`: A shortcut to SSH into the UChicago CS Linux server.
   * `grade`: A script formerly used for moving student files and adding tests for homework grading.
+  * `gitc` a more complete git shortcut script shamelessly borrowed from Prof. Haryadi Gunawi at the University of Chicago.
 
 `tools`:
   * `Makefile`: Makefile shortcut to build `bytes` and `ishow` utility binaries.
