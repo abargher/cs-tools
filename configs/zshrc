@@ -6,4 +6,3 @@ alias cs233="cd ~/CMSC/cs23320"
 alias cmsc="cd ~/CMSC/"
 alias python="python3"
 export CLICOLOR=1
-export DISPLAY=:0

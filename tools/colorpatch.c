@@ -1,6 +1,9 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+/* Tool to generate a P3 .ppm image file to view a single color. Creates a 
+ * full row x col image of the given RGB value. */
+
 void usage(char *fname)
 {
     fprintf(stderr, "Usage: %s row col rval gval bval\n", fname);

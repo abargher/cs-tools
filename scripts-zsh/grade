@@ -1,5 +1,8 @@
 #!/bin/zsh
 
+# This script is not really necessary anymore for my grading workflow, but it
+# remains for posterity.
+
 # this script was written specifically for use on my Macbook Pro. I plan to
 # make this script more general purpose in the future, maybe with some
 # more arguments, but otherwise, this is not intended for use on other machines.

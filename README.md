@@ -21,3 +21,8 @@ This repository contains various configuration files, shell scripts, shortcuts, 
   * `ishow.c`: Source code for utility that displays a given number in multiple integer formats.
   * Boot files: Scripts to edit EFI variables to allow for a convenient terminal/desktop shortcut to reboot from Linux to Windows or Windows to Linux on my desktop (using rEFInd as a boot manager to dualboot Windows 10 and Ubuntu).
     * The boot-to-{OS} scripts are taken from https://gist.github.com/Darkhogg/82a651f40f835196df3b1bd1362f5b8c and https://gist.github.com/meatcar/907d07918b4e184405e62a39bb295f99. These were essentially ready to use, although I created small shortcut wrappers for each (boot to Windows and boot to Ubuntu).
+
+`templates`:
+  * `gitignore-latex`: a simple `.gitignore` file template for LaTeX compilation. This is not comprehensive, and the Github template may be more suited to your needs.
+  * `template.tex`: A slightly cleaned up version of my LaTeX homework template. This is mostly drawn from a template provided in CMSC 27200, but I have added shorthand commands and slightly modified the layout.
+  
