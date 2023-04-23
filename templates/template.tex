@@ -1,0 +1,171 @@
+%---------change this every homework
+% place your email id between the braces so that your homework has a name
+\def\yourname{Your Name}
+% -----------------------------------------------------
+\def\homework{1} % 0 for solution, 1 for problem-set only
+\def\duedate{DATE, 11:59 pm}
+\def\duelocation{via \href{https://www.gradescope.com/}{gradescope}}
+\def\hnumber{HW\#}
+\def\prof{Professor Name}
+\def\course{\href{https://canvas.uchicago.edu/courses/}{FICT 12345 - Spring 20XX}}
+%-------------------------------------
+
+\documentclass[10pt]{article}
+\usepackage[colorlinks,urlcolor=blue]{hyperref}
+\usepackage[osf]{mathpazo}
+\usepackage{amsmath,amsfonts,graphicx,amssymb}
+\usepackage{latexsym}
+\usepackage{subfig}
+\usepackage{algpseudocode}
+\usepackage{svg}
+\usepackage{enumitem}
+\usepackage{algorithm}
+\usepackage{algorithmicx}
+\usepackage{adjmulticol}
+%\usepackage{listings}
+%\usepackage[top=1in,bottom=1.4in,left=1.5in,right=1.5in,centering]{geometry}
+%\usepackage{fullpage}
+\usepackage{color}
+\definecolor{mdb}{rgb}{0.3,0.02,0.02} 
+\definecolor{cit}{rgb}{0.05,0.2,0.45} 
+%\pagestyle{myheadings}
+\markboth{\yourname}{\yourname}
+
+\thispagestyle{empty}
+
+\newenvironment{proof}{\par\noindent{\it Proof.}\hspace*{1em}}{$\Box$\bigskip}
+\newcommand{\qed}{$\Box$}
+\newcommand{\alg}[1]{\mathsf{#1}}
+\newcommand{\handout}{
+   \renewcommand{\thepage}{\hnumber-\arabic{page}}
+   \noindent
+   \begin{center}
+    \vbox{
+        \hbox to \columnwidth {\sc{\course} --- \prof \hfill}
+        \hbox to \columnwidth {\sc due \MakeLowercase{\duedate\ \duelocation} 
+        \hfill {}}
+        \vspace{2mm}
+        \vfill {\Huge\color{mdb}\hnumber \ \yourname}
+        }
+   \end{center}
+   \vspace*{2mm}
+}
+\newcommand{\solution}[1]{\medskip\noindent{\color{cit}\textbf{Solution:} #1}}
+\newcommand{\hf}[1]{{\color{blue}  [\text{Haifeng:} #1]}}
+
+%% Custom shorthands here:
+
+\newcommand{\reals}{\mathbb{R}}
+\newcommand{\ints}{\mathbb{Z}}
+\newcommand{\nats}{\mathbb{N}}
+\newcommand{\st}{\text{ such that }}
+
+\newcommand{\inv}[1]{{#1}^{-1}}
+\newcommand{\inverse}[1]{\inv{#1}}
+
+\newcommand{\im}{\text{im}}
+\newcommand{\krn}{\text{ker}}
+\newcommand{\spn}[1]{\text{span}\left\{#1\right\}}
+\newcommand{\rnk}{\text{rank}}
+\newcommand{\rref}{\text{rref}}
+\newcommand{\vect}[2][v]{\mathbf{#1}_#2}
+\newcommand{\zvec}{\hat{\mathbf{0}}}
+
+% matrix shorthad, takes row layout as arg
+\newenvironment{mat}[1]{\left[\begin{array}{@{}#1@{}}}{\end{array}\right]}
+
+\newcommand{\bit}[1]{\{0,1\}^{ #1 }}
+%\dontprintsemicolon
+%\linesnumbered
+\newtheorem{problem}{\sc\color{cit}problem}
+\newtheorem{lemma}{Lemma}
+\newtheorem{theorem}{Theorem}
+\newtheorem{definition}{Definition}
+\newtheorem{claim}{Claim}
+
+
+\begin{document}
+\handout
+Instructions:
+\begin{itemize}
+    \item {Here is an instruction.}
+    \item {Here is another instruction: \textbf{Do not plagiarize.}}
+\end{itemize}
+\newpage
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{problem} statement:
+
+\end{problem}
+
+\begin{solution} Problem 1:
+
+\end{solution}
+\vspace{2cm}
+
+
+
+\begin{problem} statement:
+
+\end{problem}
+
+\begin{solution} Problem 2:
+
+\end{solution}
+\vspace{2cm}
+
+
+
+\begin{problem} statement:
+
+\end{problem}
+
+\begin{solution} Problem 3:
+
+\end{solution}
+\vspace{2cm}
+
+
+
+\begin{problem} statement:
+    
+\end{problem}
+
+\begin{solution} Problem 4:
+
+\end{solution}
+\vspace{2cm}
+
+
+
+\begin{problem} statement:
+
+\end{problem}
+
+\begin{solution} Problem 5:
+
+\end{solution}
+\vspace{2cm}
+
+
+\begin{problem} statement:
+
+\end{problem}
+
+\begin{solution} Problem 6:
+
+\end{solution}
+\vspace{2cm}
+
+
+\begin{problem} statement:
+
+\end{problem}
+
+\begin{solution} Problem 7:
+
+\end{solution}
+
+\end{document}
