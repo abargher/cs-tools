@@ -6,7 +6,8 @@
 Acknowledgement:
 
 This utility is courtesy of Dr. Adam Shaw, provided during CMSC 15200 in Winter
-quarter of 2022 at the University of Chicago.
+quarter of 2022 at the University of Chicago. I have modified it slightly to
+add binary string functionality and prettier output.
  
  */
 
@@ -47,6 +48,7 @@ int main(int argc, char *argv[])
         else
             printf("%6d\t[%d]\t%02X\t%3d\t%s\n",i,c,c,c,bin);
         
+        free(bin);
         c = getc(stdin);
         ++i;
     }
