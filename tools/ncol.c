@@ -4,6 +4,11 @@
 #include <ctype.h>
 #include <math.h>
 
+struct args {
+    int argc;
+    char **argv;
+};
+
 enum subcom {
     ALL, NEG, ADD, MUL, SUM, PRD, PWR, LBD, RPT, MAX, AVG, CSV, RNG, GEN
 };
@@ -98,7 +103,7 @@ int numstring(char *line) {
     return 1;
 }
 
-void num_transform(int (*f)(int, void *), void *args)
+void num_transform(int (*f)(int, struct args*), struct args *args)
 {
     char line[64];
     while (fgets(line, 64, stdin)) {
@@ -110,25 +115,25 @@ void num_transform(int (*f)(int, void *), void *args)
     }
 }
 
-int neg(int n, void *args) {
+int neg(int n, struct args *args) {
     return -n;
 }
 
-int add(int n, void *_m)
+int add(int n, struct args *args)
 {
-    int m = (int)_m;
+    int m = atoi(args->argv[2]);
     return n + m;
 }
 
-int mul(int n, void *_fact)
+int mul(int n, struct args *args)
 {
-    int m = (int)_fact;
+    int m = atoi(args->argv[2]); 
     return n * m;
 }
 
-int pwr(int n, void *_p)
+int pwr(int n, struct args *args)
 {
-    int p = (int)_p;
+    int p = atoi(args->argv[2]);
     return (int)pow(n, p);
 }
 
@@ -205,7 +210,7 @@ void max_num(void)
 
 void avg(void)
 {
-    int total = 0;
+    long long total = 0;
     int count = 0;
     char line[64];
     while (fgets(line, 64, stdin)) {
@@ -217,7 +222,7 @@ void avg(void)
         }
     }
     if (count)
-        printf("%d\n", total / count);
+        printf("%lld\n", total / count);
 }
 
 void rng(int low, int high)
@@ -311,15 +316,19 @@ int main (int argc, char *argv[])
         exit(0);
     }
 
+    struct args args;
+    args.argc = argc;
+    args.argv = argv;
+
     switch (cmd) {
         case NEG:
             num_transform(neg, NULL);
             break;
         case ADD:
-            num_transform(add, (void *)atoi(argv[2]));
+            num_transform(add, &args);
             break;
         case MUL:
-            num_transform(mul, (void *)atoi(argv[2]));
+            num_transform(mul, &args);
             break;
         case SUM:
             sum();
@@ -328,7 +337,7 @@ int main (int argc, char *argv[])
             prd();
             break;
         case PWR:
-            num_transform(pwr, (void *)atoi(argv[2]));
+            num_transform(pwr, &args);
             break;
         case LBD:
             lbd(atoi(argv[2]));
