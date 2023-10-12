@@ -1,0 +1,61 @@
+#!/bin/zsh
+# A shortcut to open all of the student homework assignments for grading in
+# CMSC 14400 - Autumn 2023
+
+# Personalized globals - CHANGE FOR YOUR ENVIRONMENT
+
+CNET="abargher"
+REPO_PATH="$HOME/CMSC/coursestaff/a23-cs144"
+
+# enables persistent filename bar for vim
+# Makes it easy to ensure you're giving the grade to the right student!
+VIM_OPTS="-c 'set laststatus=2'"
+
+# Open solution PDF in Preview with the 'open' command - macOS only
+# Replace this with your favorite PDF viewer program on other operating systems
+pdf_open() {
+    open $1  # open the file given to this function
+}
+
+# ==========================================
+
+# enforce a single argument indicating HW name
+if [ $# -ne 1 ]; then
+    echo ""
+    echo "Run : open-assign <homework name>"
+    echo "Ex  : open-assign hw1"
+    exit
+fi
+if [[ ! $1 =~ ^hw[0-9]$ ]]; then
+    echo "first argument must match hw[0-9]"
+    exit
+fi
+
+HW_NAME=$1
+GUIDE_PATH="$REPO_PATH/soln-and-guides/guide-$HW_NAME.txt"
+SOLN_PATH="$REPO_PATH/soln-and-guides/soln-$HW_NAME.pdf"
+
+# update the repo for safety
+# svn up $REPO_PATH
+
+ALLOC=$(grep $CNET $REPO_PATH/$HW_NAME/alloc.csv)
+
+WORK_FNAMES=$(echo $ALLOC |
+    sed -E 's|'"$CNET"',(..*),([0-9])*|'"$REPO_PATH/$HW_NAME/export/"'\1/'"$HW_NAME"'\.txt|g' |
+    tr '\n' ' ')
+
+GRADE_FNAMES=$(echo $ALLOC |
+    sed -E 's|'"$CNET"',(..*),([0-9])*|'"$REPO_PATH/$HW_NAME/grade/"'\1\-q\2\.txt|g' |
+    tr '\n' ' ')
+
+# Open solution PDF
+pdf_open $SOLN_PATH
+
+# Create and attach to a tmux session with guide, grading,
+# and assignment panes, at the root of the repo
+tmux new-session -c $REPO_PATH -s 'grade' -d "vim $VIM_OPTS `echo $WORK_FNAMES`"
+# vim `echo $GRADE_FNAMES`
+tmux split-window -h "vim $VIM_OPTS `echo $GRADE_FNAMES`"
+tmux split-window -v "vim $VIM_OPTS $GUIDE_PATH"
+# tmux a -t grade
+
