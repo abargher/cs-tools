@@ -22,8 +22,8 @@ pdf_open() {
 # enforce a single argument indicating HW name
 if [ $# -ne 1 ]; then
     echo ""
-    echo "Run : open-assign <homework name>"
-    echo "Ex  : open-assign hw1"
+    echo "Run : open-grade <homework name>"
+    echo "Ex  : open-grade hw1"
     exit
 fi
 if [[ ! $1 =~ ^hw[0-9]$ ]]; then
