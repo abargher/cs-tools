@@ -36,7 +36,7 @@ GUIDE_PATH="$REPO_PATH/soln-and-guides/guide-$HW_NAME.txt"
 SOLN_PATH="$REPO_PATH/soln-and-guides/soln-$HW_NAME.pdf"
 
 # update the repo for safety
-# svn up $REPO_PATH
+svn up $REPO_PATH
 
 ALLOC=$(grep $CNET $REPO_PATH/$HW_NAME/alloc.csv)
 
@@ -54,8 +54,7 @@ pdf_open $SOLN_PATH
 # Create and attach to a tmux session with guide, grading,
 # and assignment panes, at the root of the repo
 tmux new-session -c $REPO_PATH -s 'grade' -d "vim $VIM_OPTS `echo $WORK_FNAMES`"
-# vim `echo $GRADE_FNAMES`
 tmux split-window -h "vim $VIM_OPTS `echo $GRADE_FNAMES`"
 tmux split-window -v "vim $VIM_OPTS $GUIDE_PATH"
-# tmux a -t grade
+tmux a -t grade
 
