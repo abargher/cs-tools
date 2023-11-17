@@ -48,8 +48,15 @@ GRADE_FNAMES=$(echo $ALLOC |
     sed -E 's|'"$CNET"',(..*),([0-9])*|'"$REPO_PATH/$HW_NAME/grade/"'\1\-q\2\.txt|g' |
     tr '\n' ' ')
 
+
 # Open solution PDF
 pdf_open $SOLN_PATH
+
+# Try to open submission pdfs
+echo $ALLOC |
+    sed -E 's|'"$CNET"',(..*),([0-9])*|'"$REPO_PATH/$HW_NAME/export/"'\1/'"$HW_NAME"'\.pdf|g' | 
+    awk '{ system ("open " $0 " &> /dev/null") }'
+
 
 # Create and attach to a tmux session with guide, grading,
 # and assignment panes, at the root of the repo
