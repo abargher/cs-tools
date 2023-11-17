@@ -57,7 +57,7 @@ pdf_open $SOLN_PATH
 # Try to open submission pdfs
 echo $ALLOC |
     sed -E 's|'"$CNET"',(..*),([0-9])*|'"$REPO_PATH/$HW_NAME/export/"'\1/'"$HW_NAME"'\.pdf|g' | 
-    awk -v cmd="$PDF_VIEWER" '{ system (cmd " " $0 " &> /dev/null") }'
+    awk -v pdf="$PDF_VIEWER" '{ system (pdf " " $0 " &> /dev/null") }'
 
 
 # Create and attach to a tmux session with guide, grading,
