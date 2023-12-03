@@ -2,7 +2,7 @@
 
 # A fast way (one line command) to run gitc commit with messages
 
-# This script runs svn update before you try to commit.
+# This script runs git pull before you try to commit.
 # This way you reduce conflicts.
 
 # Put this gitc file in your ~/bin/ ($HOME/bin) folder
