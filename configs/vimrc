@@ -1,5 +1,5 @@
 filetype on
-filetype plugin on
+filetype plugin indent on    " required
 set tabstop=4
 set shiftwidth=4
 set expandtab
@@ -10,3 +10,7 @@ syntax on
 set number
 set colorcolumn=81
 
+" Write current buffer if changed before navigating from Vim to tmux pane
+let g:tmux_navigator_save_on_switch = 1
+
+set rtp+=/opt/homebrew/opt/fzf

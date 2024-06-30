@@ -1,8 +1,18 @@
+export DOTNET_CLI_TELEMETRY_OPTOUT=1
 export PATH=$PATH:~/cmsc/cs-tools/tools:~/cmsc/cs-tools/scripts-zsh
-export EINSTEIN_IP=128.135.114.198
+export PATH=/usr/local/smlnj/bin:$PATH
+
+alias python="python3"
 alias scrs="cd ~/CMSC/cs-tools/scripts-zsh"
 alias cs154="cd ~/CMSC/cs154/abargher"
 alias cs233="cd ~/CMSC/cs23320"
+alias cs142="cd ~/CMSC/coursestaff/w24-cs142; source student/bin/activate"
 alias cmsc="cd ~/CMSC/"
-alias python="python3"
+alias staff="cd ~/CMSC/coursestaff"
+alias silo="cd ~/CMSC/coursestaff/silo"
+alias ios="cd ~/CMSC/ios"
+alias myip="dig +short myip.opendns.com @resolver1.opendns.com"
 export CLICOLOR=1
+
+[ -f "/Users/alec/.ghcup/env" ] && source "/Users/alec/.ghcup/env" # ghcup-env
+eval "$(fzf --zsh)"
