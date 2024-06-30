@@ -20,7 +20,7 @@ for conf in "${HOME_CONFIGS[@]}"; do
     if test -f $HOME/.$conf; then
         cp $HOME/.$conf $HOME/.$conf-$(TZ='America/Chicago' date "+%y-%m-%d_%H-%M").bak
     fi
-    cp ./$conf /$HOME/.$conf
+    cp /$HOME/$CS_ROOT/cs-tools/configs/$conf /$HOME/.$conf
 done
 
 # return to original directory
