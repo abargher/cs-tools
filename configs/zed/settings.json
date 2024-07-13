@@ -1,0 +1,64 @@
+// Zed settings
+//
+// For information on how to configure Zed, see the Zed
+// documentation: https://zed.dev/docs/configuring-zed
+//
+// To see all of Zed's default settings without changing your
+// custom settings, run the `open default settings` command
+// from the command palette or from `Zed` application menu.
+{
+    // Line formatting
+    "preferred_line_length": 80,
+    "tab_size": 4,
+    "soft_wrap": "preferred_line_length",
+    "remove_trailing_whitespace_on_save": true,
+
+    // Font features
+    "ui_font_family": "Zed Sans",
+    "ui_font_size": 15,
+    "buffer_font_size": 13,
+    "buffer_font_features": {
+        "calt": false
+    },
+
+    // Interface
+    "show_inline_completions": false, // AI completions
+    "outline_panel": {
+        "dock": "right"
+    },
+    "base_keymap": "VSCode",
+    "theme": "One Dark",
+    "vim_mode": true,
+    "confirm_quit": true,
+    "autosave": "on_window_change",
+    "format_on_save": "off",
+
+    "telemetry": {
+        "diagnostics": false,
+        "metrics": false
+    },
+
+    // Language overrides
+    "languages": {
+        "Python": {
+            "tab_size": 4
+        },
+        "Rust": {
+            "preferred_line_length": 100,
+            "format_on_save": "on",
+            // use four spaces, not tabs
+            "hard_tabs": false,
+            "tab_size": 4
+        },
+        "C": {
+            "preferred_line_length": 80,
+            "hard_tabs": false,
+            "tab_size": 2
+        },
+        "Make": {
+            "hard_tabs": true,
+            "tab_size": 4
+        }
+
+    }
+}
