@@ -44,7 +44,7 @@ let g:airline#extensions#tabline#left_alt_sep = '|'
 
 " vimtex
 let g:tex_flavor='latex'
-let g:vimtex_view_method='zathura'
+let g:vimtex_view_method='skim'
 let g:vimtex_quickfix_mode=0
 set conceallevel=1
 let g:tex_conceal='abdmg'
@@ -69,11 +69,20 @@ let g:vimtex_compiler_latexmk = {
 "       \]
 
 " snippets
-let g:UltiSnipsExpandTrigger = '<tab>'
-let g:UltiSnipsJumpForwardTrigger = '<tab>'
-let g:UltiSnipsJumpBackwardTrigger = '<s-tab>'
+let g:UltiSnipsExpandTrigger = '<C-e>'
+let g:UltiSnipsJumpForwardTrigger = '<C-w>'
+let g:UltiSnipsJumpBackwardTrigger = '<C-q>'
+let g:UltiSnipsSnippetDirectories = ["UltiSnips", "snippets-custom"]
 
 set rtp+=/opt/homebrew/opt/fzf
+
+" Trimming whitespace shortcut
+function! Trim()
+    let l:save = winsaveview()
+    keeppatterns %s/\s\+$//e
+    call winrestview(l:save)
+endfunction
+nnoremap <C-s> :call Trim()<CR>
 
 """"" required for Vundle setup:
 set nocompatible
@@ -89,6 +98,7 @@ Plugin 'valloric/youcompleteme'
 Plugin 'sheerun/vim-polyglot'
 Plugin 'scrooloose/nerdtree'
 Plugin 'sirver/ultisnips'
+Plugin 'honza/vim-snippets'
 Plugin 'tpope/vim-surround'
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
