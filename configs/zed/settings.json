@@ -41,12 +41,18 @@
     // Language overrides
     "languages": {
         "Python": {
-            "tab_size": 4
+            "hard_tabs": false,
+            "tab_size": 4,
+            "formatter": {
+                "external": {
+                    "command": "black",
+                    "arguments": ["-"]
+                }
+            }
         },
         "Rust": {
             "preferred_line_length": 100,
             "format_on_save": "on",
-            // use four spaces, not tabs
             "hard_tabs": false,
             "tab_size": 4
         },
@@ -57,8 +63,27 @@
         },
         "Make": {
             "hard_tabs": true,
-            "tab_size": 4
+            "tab_size": 8
         }
-
+    },
+    "lsp": {
+        // "rust-analyzer": {
+        //     "initialization_options": {
+        //         "checkOnSave": {
+        //             "command": "clippy" // rust-analyzer.checkOnSave.command
+        //         }
+        //     }
+        // },
+        "pyright": {
+            "settings": {
+                "python.analysis": {
+                    "diagnosticMode": "workspace",
+                    "typeCheckingMode": "strict"
+                },
+                "python": {
+                    "pythonPath": "venv/bin/python"
+                }
+            }
+        }
     }
 }

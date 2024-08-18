@@ -1,0 +1,21 @@
+#!/bin/zsh
+
+SILO_PATH="$HOME/CMSC/coursestaff/silo"
+
+if [ $# -ne 1 ]; then
+    echo ""
+    echo "Run : pgrade <submission num>"
+    exit
+fi
+
+
+SUB_NUM=$1
+M1_DIR="milestone_3"
+mkdir "$SILO_PATH/$M1_DIR"
+echo "[pytest]\npythonpath = src/ tests/" > "$SILO_PATH/$M1_DIR/pytest.ini"
+cp "$HOME/Downloads/$SUB_NUM.zip" "$SILO_PATH/$M1_DIR/"
+unzip "$SILO_PATH/$M1_DIR/$SUB_NUM.zip" -d "$SILO_PATH/$M1_DIR/"
+cp "$SILO_PATH/go-reference/tests/test_go_reference.py" "$SILO_PATH/$M1_DIR/tests"
+cp "$SILO_PATH/go-reference/tests/helpers.py" "$SILO_PATH/$M1_DIR/tests"
+rm "$SILO_PATH/$M1_DIR/$SUB_NUM.zip"
+

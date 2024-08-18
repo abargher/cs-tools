@@ -1,0 +1,10 @@
+https://raw.githubusercontent.com/mbadolato/iTerm2-Color-Schemes/master/schemes/PaleNightHC.itermcolors
+https://raw.githubusercontent.com/mbadolato/iTerm2-Color-Schemes/master/schemes/Afterglow.itermcolors
+https://raw.githubusercontent.com/mbadolato/iTerm2-Color-Schemes/master/schemes/Dracula+.itermcolors
+https://raw.githubusercontent.com/mbadolato/iTerm2-Color-Schemes/master/schemes/BlulocoDark.itermcolors
+https://raw.githubusercontent.com/mbadolato/iTerm2-Color-Schemes/master/schemes/catppuccin-frappe.itermcolors
+https://raw.githubusercontent.com/mbadolato/iTerm2-Color-Schemes/master/schemes/Chalk.itermcolors
+https://raw.githubusercontent.com/mbadolato/iTerm2-Color-Schemes/master/schemes/ChallengerDeep.itermcolors
+https://raw.githubusercontent.com/mbadolato/iTerm2-Color-Schemes/master/schemes/Chester.itermcolors
+https://raw.githubusercontent.com/mbadolato/iTerm2-Color-Schemes/master/schemes/Darkside.itermcolors
+https://raw.githubusercontent.com/mbadolato/iTerm2-Color-Schemes/master/schemes/DoomOne.itermcolors
