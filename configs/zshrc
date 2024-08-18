@@ -123,7 +123,8 @@ alias silo="cd ~/CMSC/coursestaff/silo"
 alias ios="cd ~/CMSC/ios"
 alias python="python3"
 alias myip="dig +short myip.opendns.com @resolver1.opendns.com"
-alias la="ls -al"
+alias la="ls -a"
+alias lsl="ls -al"
 alias tools="cd ~/CMSC/cs-tools"
 
 function watchglow {
