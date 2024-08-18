@@ -8,4 +8,5 @@ ishow
 colorpatch
 ncol
 chromedriver
+*.swp
 
