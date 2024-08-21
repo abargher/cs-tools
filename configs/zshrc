@@ -141,9 +141,11 @@ function watchglow {
 
 [ -f "/Users/alec/.ghcup/env" ] && source "/Users/alec/.ghcup/env" # ghcup-env
 
-eval "$(fzf --zsh)"
 export PATH="/opt/homebrew/opt/openjdk@21/bin:$PATH"
 export CPPFLAGS="-I/opt/homebrew/opt/openjdk@21/include"
 export GODOT4="/Applications/Godot_mono.app/Contents/MacOS/Godot"
 export DBUS_SESSION_BUS_ADDRESS="unix:path=$DBUS_LAUNCHD_SESSION_BUS_SOCKET"
+
+eval "$(fzf --zsh)"
+eval "$(zoxide init zsh)"
 
