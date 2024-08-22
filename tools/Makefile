@@ -17,4 +17,4 @@ colorpatch: colorpatch.c
 ncol: ncol.c
 	$(CC) $(CFLAGS) -lm -o ncol ncol.c
 clean: 
-	rm -f *.o bytes ishow colorpatch *~
+	rm -f *.o bytes ishow colorpatch ncol *~
