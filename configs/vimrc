@@ -1,5 +1,5 @@
 """"""""" Custom settings
-set shell=/bin/zsh
+set shell=zsh
 set tabstop=4
 set shiftwidth=4
 set expandtab
