@@ -1,0 +1,14 @@
+#!/usr/bin/env bash
+
+NOTES_DIR="$HOME/notes"
+TODAY=$(date "+%m-%d-%y")
+FILE="$NOTES_DIR/$TODAY.md"
+
+if [ ! -f $FILE ]; then
+	echo "# Notes for $TODAY:" > $FILE
+	echo "====================" >> $FILE
+	echo "" >> $FILE
+fi
+
+vim -c \$ $FILE
+
