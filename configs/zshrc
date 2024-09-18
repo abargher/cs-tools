@@ -95,6 +95,7 @@ export MANPATH="/usr/local/man:$MANPATH"
 export LANG=en_US.UTF-8
 
 # Preferred editor for local and remote sessions
+export EDITOR="vim"
 # if [[ -n $SSH_CONNECTION ]]; then
 #   export EDITOR='vim'
 # else
@@ -117,7 +118,7 @@ export LANG=en_US.UTF-8
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 export DOTNET_CLI_TELEMETRY_OPTOUT=1
 export CLICOLOR=1
-export PATH=$PATH:~/cmsc/cs-tools/tools:~/cmsc/cs-tools/scripts-zsh
+export PATH=$PATH:~/CMSC/cs-tools/tools:~/CMSC/cs-tools/scripts-zsh
 export PATH=/usr/local/smlnj/bin:$PATH
 export PATH="/opt/homebrew/opt/openjdk@21/bin:$PATH"
 export PATH=~/.local/bin:$PATH
