@@ -204,6 +204,7 @@
     spotify
     discord
     dunst
+    kitty
   ];
 
   # fonts
