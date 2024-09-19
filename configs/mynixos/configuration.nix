@@ -12,6 +12,28 @@
 
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
 
+  # enable auto-updates
+  system.autoUpgrade = {
+    enable = true;
+    flake = inputs.self.outPath;
+    flags = [
+      "--update-input"
+      "nixpkgs"
+      "-L" # print build logs
+    ];
+    dates = "02:00";
+    randomizedDelaySec = "45min";
+  };
+
+  # Enable using dynamic libraries for binaries that require them
+  programs.nix-ld = {
+    enable = true;
+    libraries = with pkgs; [
+      # add missing dynamic libraries for unpackaged programs here
+      # NOT in environment.systemPackages
+    ];
+  };
+
   # Bootloader.
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
