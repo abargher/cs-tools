@@ -166,6 +166,10 @@
     firefox = {
       enable = true;
     };
+
+    hyprland = {
+      enable = true;
+    };
   };
 
   # Allow unfree packages
