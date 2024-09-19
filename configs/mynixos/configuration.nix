@@ -197,6 +197,7 @@
     unstable.zed-editor
     alejandra
     libnotify
+    spotify
   ];
 
   # fonts
