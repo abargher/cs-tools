@@ -199,6 +199,7 @@
     libnotify
     spotify
     discord
+    dunst
   ];
 
   # fonts
