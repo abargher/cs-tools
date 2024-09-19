@@ -1,0 +1,43 @@
+#!/usr/bin/env zsh
+#
+# NixOS configuration rebuild script.
+# Borrowed from noboilerplate on Youtube
+
+set -e
+
+# Go to config directory
+pushd ~/CMSC/cs-tools/configs/mynixos/
+
+$EDITOR configuration.nix
+
+# Quit if no changes
+if git diff --quiet '*.nix'; then
+    echo "No changes detected, exiting."
+    popd
+    exit 0
+fi
+
+# Format nix files
+alejandra .a &>/dev/null \
+    || ( alejandra . ; echo "formatting failed!" && exit 1)
+
+
+# show changes
+git diff -U0 '*.nix'
+
+echo "NixOS Rebuilding..."
+
+# Rebuild, output simplified errors, log tracebacks
+sudo nixos-rebuild switch --flake . &> nixos-switch.log \
+    || (cat nixos-switch.log | grep --color error && exit 1)
+
+# get current metadata
+current=$(nixos-rebuild list-generations | grep current)
+
+# Commit changes with generation metadata
+git commit -am "NixOS Generation $currrent"
+
+popd
+
+notify-send -e "NixOS Rebuilt OK!" --icon=software-update-available
+
