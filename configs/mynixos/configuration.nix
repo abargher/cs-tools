@@ -195,6 +195,8 @@
     python311Packages.pygments
     vscode
     unstable.zed-editor
+    alejandra
+    libnotify
   ];
 
   # fonts
