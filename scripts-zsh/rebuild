@@ -32,10 +32,11 @@ sudo nixos-rebuild switch --flake . &> nixos-switch.log \
     || (cat nixos-switch.log | grep --color error && exit 1)
 
 # get current metadata
-current=$(nixos-rebuild list-generations | grep current)
+current=$(nixos-rebuild list-generations |
+          grep current | sed 's/ \+ /\t/g' | cut -f 1-4)
 
 # Commit changes with generation metadata
-git commit -am "NixOS Generation $currrent"
+git commit -am "NixOS Generation $current"
 
 popd
 
