@@ -40,5 +40,6 @@ git commit -am "NixOS Generation $current"
 
 popd
 
-notify-send -e "NixOS Rebuilt OK!" --icon=software-update-available
+# notify-send -e "NixOS Rebuilt OK!" --icon=software-update-available
+echo "NixOS Rebuilt OK!"
 

@@ -198,6 +198,7 @@
     alejandra
     libnotify
     spotify
+    discord
   ];
 
   # fonts
