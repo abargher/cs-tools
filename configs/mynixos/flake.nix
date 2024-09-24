@@ -1,5 +1,5 @@
 {
-  description = "A very basic flake";
+  description = "nixos configuration";
 
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs?ref=nixos-24.05";
@@ -11,7 +11,7 @@
     nixosConfigurations.nixos = nixpkgs.lib.nixosSystem {
       specialArgs = { inherit inputs; };
       modules = [
-        ./configuration.nix
+        ./hosts/default/configuration.nix
       ];
     };
 
