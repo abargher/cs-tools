@@ -136,7 +136,7 @@ alias ios="cd ~/CMSC/ios"
 alias python="python3"
 alias myip="dig +short myip.opendns.com @resolver1.opendns.com"
 alias la="ls -a"
-alias lsl="ls -al"
+alias lsl="ls -alh"
 alias tools="cd ~/CMSC/cs-tools"
 alias today="date +%Y-%m-%d"
 
