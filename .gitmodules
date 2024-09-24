@@ -3,4 +3,4 @@
 	url = https://github.com/zsh-users/zsh-autosuggestions
 [submodule "configs/oh-my-zsh-custom/plugins/zsh-syntax-highlighting"]
 	path = configs/oh-my-zsh-custom/plugins/zsh-syntax-highlighting
-	url = https://github.com/zsh-users/zsh-sytax-highlighting.git
+	url = https://github.com/zsh-users/zsh-syntax-highlighting.git
