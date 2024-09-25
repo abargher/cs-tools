@@ -8,10 +8,17 @@
 
   outputs = { nixpkgs, ... } @ inputs:
   {
-    nixosConfigurations.nixos = nixpkgs.lib.nixosSystem {
+    nixosConfigurations.default = nixpkgs.lib.nixosSystem {
       specialArgs = { inherit inputs; };
       modules = [
         ./hosts/default/configuration.nix
+      ];
+    };
+    
+    nixosConfigurations.orcus = nixpkgs.lib.nixosSystem {
+      specialArgs = { inherit inputs; };
+      modules = [
+        ./hosts/orcus/configuration.nix
       ];
     };
 
