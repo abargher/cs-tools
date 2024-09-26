@@ -23,7 +23,7 @@
     alsa.enable = true;
     alsa.support32Bit = true;
     pulse.enable = true;
-    jack.enable - true;
+    jack.enable = true;
   };
 
   # Enable OpenSSH daemon
@@ -39,7 +39,7 @@
       # add missing dynamic libraries for unpackages programs here
     ];
   };
-  
+
   # auto-updates
   system.autoUpgrade = {
     enable = true;
@@ -68,13 +68,13 @@
     LC_TELEPHONE = "en_US.UTF-8";
     LC_TIME = "en_US.UTF-8";
   };
-  
+
 
   # fonts
   fonts.packages = with pkgs; [
     (nerdfonts.override { fonts = [ "Hack" ]; })
   ];
-  
+
 
   # user account
   # programs
