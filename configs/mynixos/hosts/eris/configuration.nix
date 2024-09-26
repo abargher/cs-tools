@@ -57,6 +57,8 @@
   };
 
   programs = {
+    firefox.enable = true;
+
     # zsh config
     zsh = {
       enable = true;
@@ -65,8 +67,11 @@
         custom = "~/CMSC/cs-tools/configs/oh-my-zsh-custom";
       };
     };
-
-    firefox.enable = true;
+    
+    hyprland = {
+      enable = true;
+      xwayland.enable = true;
+    };
   };
 
   # List packages installed in system profile. To search, run:
