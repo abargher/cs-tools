@@ -91,7 +91,19 @@
   };
 
   # Install firefox.
-  programs.firefox.enable = true;
+  programs = {
+    # zsh config
+    zsh = {
+      enable = true;
+      ohMyZsh = {
+        enable = true;
+        custom = "~/CMSC/cs-tools/configs/oh-my-zsh-custom";
+      };
+    };
+
+    firefox.enable = true;
+  };
+
 
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;

@@ -151,7 +151,7 @@
   };
 
   programs = {
-    # Zsh config
+    # zsh config
     zsh = {
       enable = true;
       ohMyZsh = {
@@ -160,10 +160,7 @@
       };
     };
 
-    # Install firefox.
-    firefox = {
-      enable = true;
-    };
+    firefox.enable = true;
   };
 
   # Allow unfree packages
