@@ -7,7 +7,7 @@
     nixos-hardware.url = "github:NixOS/nixos-hardware/master";
   };
 
-  outputs = { nixpkgs, ... } @ inputs:
+  outputs = { nixpkgs, nixos-hardware, ... } @ inputs:
   {
     # Einstein desktop
     nixosConfigurations.default = nixpkgs.lib.nixosSystem {
@@ -21,7 +21,7 @@
     nixosConfigurations.eris = nixpkgs.lib.nixosSystem {
       specialArgs = { inherit inputs; };
       modules = [
-        inputs.nixos-hardware.nixosModules.lenovo-thinkpad-t480s
+        nixos-hardware.nixosModules.lenovo-thinkpad-t480s
         ./hosts/eris/configuration.nix
       ];
     };
