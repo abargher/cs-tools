@@ -27,6 +27,14 @@
     variant = "";
   };
 
+  # Fingerprint sensor settings
+  services.fprintd.enable = true;
+
+  services.fprintd.tod.enable = true;
+
+  services.fprintd.tod.driver = pkgs.libfprint-2-tod1-vfs0090;
+
+
   # Define a user account. Don't forget to set a password with ‘passwd’.
   users.users.alec = {
     isNormalUser = true;
@@ -58,6 +66,10 @@
     unstable = inputs.nixpkgs-unstable.legacyPackages.${pkgs.system};
   in
   [
+    # hardware specific
+    fprintd
+
+    # common packages
     vim-full
     tmux
     wget
