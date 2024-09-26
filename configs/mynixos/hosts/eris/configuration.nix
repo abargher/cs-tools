@@ -110,5 +110,6 @@
     gmp
     ncurses
     tree
+    kitty
   ];
 }
