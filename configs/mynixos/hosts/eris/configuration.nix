@@ -29,11 +29,10 @@
 
   # Fingerprint sensor settings
   services.fprintd.enable = true;
-
   services.fprintd.tod.enable = true;
-
   services.fprintd.tod.driver = pkgs.libfprint-2-tod1-vfs0090;
-
+  # services.open-fprintd.enable = true;
+  # services.python-validity.enable = true;
 
   # Define a user account. Don't forget to set a password with ‘passwd’.
   users.users.alec = {
@@ -90,7 +89,7 @@
     alejandra
     spotify
     discord
-
+    usbutils
     curl
     gmp
     ncurses
