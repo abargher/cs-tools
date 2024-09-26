@@ -10,10 +10,10 @@
   outputs = { nixpkgs, nixos-hardware, ... } @ inputs:
   {
     # Einstein desktop
-    nixosConfigurations.default = nixpkgs.lib.nixosSystem {
+    nixosConfigurations.einstein = nixpkgs.lib.nixosSystem {
       specialArgs = { inherit inputs; };
       modules = [
-        ./hosts/default/configuration.nix
+        ./hosts/einstein/configuration.nix
       ];
     };
     
@@ -26,6 +26,7 @@
       ];
     };
 
+    # Chromebook
     nixosConfigurations.orcus = nixpkgs.lib.nixosSystem {
       specialArgs = { inherit inputs; };
       modules = [

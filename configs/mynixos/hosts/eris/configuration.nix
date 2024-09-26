@@ -2,7 +2,7 @@
 # your system.  Help is available in the configuration.nix(5) man page
 # and in the NixOS manual (accessible by running ‘nixos-help’).
 
-{ config, pkgs, ... }:
+{ config, pkgs, inputs, ... }:
 
 {
   imports =
@@ -14,7 +14,7 @@
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
 
-  networking.hostName = "nixos"; # Define your hostname.
+  networking.hostName = "eris"; # Define your hostname.
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
 
   # Configure network proxy if necessary
@@ -97,11 +97,31 @@
 
   # List packages installed in system profile. To search, run:
   # $ nix search wget
-  environment.systemPackages = with pkgs; [
-    vim-full # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.
+  environment.systemPackages = with pkgs;
+  let
+    unstable = inputs.nixpkgs-unstable.legacyPackages.${pkgs.system};
+  in
+  [
+    vim-full
+    tmux
     wget
     git
     file
+    google-chrome
+    neofetch
+    fzf
+    zoxide
+    python3
+    cmake
+    clang
+    gcc
+    gnumake
+    python311Packages.pygments
+    vscode
+    unstable.zed-editor
+    alejandra
+    spotify
+    discord
   ];
 
   # Some programs need SUID wrappers, can be configured further or are
