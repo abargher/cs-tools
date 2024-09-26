@@ -11,14 +11,17 @@
       ../../modules/nixos/common.nix
     ];
 
-  networking.hostName = "eris"; # Define your hostname.
+  networking.hostName = "eris";
 
   # Enable the X11 windowing system.
   # You can disable this if you're only using the Wayland session.
-  services.xserver.enable = true;
+  # services.xserver.enable = true;
 
   # Enable the KDE Plasma Desktop Environment.
-  services.displayManager.sddm.enable = true;
+  services.displayManager.sddm = {
+    enable = true;
+    wayland.enable = true;
+  };
   services.desktopManager.plasma6.enable = true;
 
   # Configure keymap in X11
@@ -28,6 +31,7 @@
   };
 
   # Fingerprint sensor settings
+  security.pam.services.sudo.fprintAuth = false;
   services.fprintd = let
     fingerprint-module = inputs.nixos-06cb-009a-fingerprint-sensor;
   in
