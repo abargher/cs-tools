@@ -28,11 +28,18 @@
   };
 
   # Fingerprint sensor settings
-  services.fprintd.enable = true;
-  services.fprintd.tod.enable = true;
-  services.fprintd.tod.driver = pkgs.libfprint-2-tod1-vfs0090;
-  # services.open-fprintd.enable = true;
-  # services.python-validity.enable = true;
+  services.fprintd = let
+    fingerprint-module = inputs.nixos-06cb-009a-fingerprint-sensor;
+  in
+  {
+    enable = true;
+    tod = {
+      enable = true;
+      driver = fingerprint-module.lib.libfprint-2-tod1-vfs0090-bingch {
+        calib-data-file = ./calib-data.bin;
+      };
+    };
+  };
 
   # Define a user account. Don't forget to set a password with ‘passwd’.
   users.users.alec = {
