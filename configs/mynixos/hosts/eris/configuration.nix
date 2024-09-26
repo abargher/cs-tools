@@ -87,6 +87,7 @@
       kdePackages.kate
     #  thunderbird
     ];
+    shell = pkgs.zsh;
   };
 
   # Install firefox.
@@ -122,6 +123,10 @@
     alejandra
     spotify
     discord
+
+    curl
+    gmp
+    ncurses
   ];
 
   # Some programs need SUID wrappers, can be configured further or are
