@@ -31,7 +31,7 @@
   };
 
   # Fingerprint sensor settings
-  security.pam.services.sudo.fprintAuth = false;
+  security.pam.services.sudo.fprintAuth = false; # disable fingerprint sudo
   services.fprintd = let
     fingerprint-module = inputs.nixos-06cb-009a-fingerprint-sensor;
   in
