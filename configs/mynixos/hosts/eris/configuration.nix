@@ -104,5 +104,6 @@
     curl
     gmp
     ncurses
+    tree
   ];
 }
