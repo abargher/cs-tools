@@ -21,7 +21,7 @@
     nixosConfigurations.eris = nixpkgs.lib.nixosSystem {
       specialArgs = { inherit inputs; };
       modules = [
-        nixos-hardware.nixosModules.lenovo-thinkpad-t480s
+        inputs.nixos-hardware.nixosModules.lenovo-thinkpad-t480s
         ./hosts/eris/configuration.nix
       ];
     };
