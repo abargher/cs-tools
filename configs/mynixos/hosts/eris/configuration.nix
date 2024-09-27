@@ -2,13 +2,17 @@
 # your system.  Help is available in the configuration.nix(5) man page
 # and in the NixOS manual (accessible by running ‘nixos-help’).
 
-{ config, pkgs, inputs, ... }:
+{ config, pkgs, unstable-pkgs, inputs, ... }:
 
 {
+  _module.args.unstable-pkgs = import inputs.nixpkgs-unstable {
+    inherit (pkgs.stdenv.hostPlatform) system;
+    inherit (config.nixpkgs) config;
+  };
+
   imports =
     [ # Include the results of the hardware scan.
       ./hardware-configuration.nix
-      ../../modules/nixos/common.nix
     ];
 
   networking.hostName = "eris";
@@ -80,7 +84,7 @@
   # $ nix search wget
   environment.systemPackages = with pkgs;
   let
-    unstable = inputs.nixpkgs-unstable.legacyPackages.${pkgs.system};
+    unstable = unstable-pkgs;
   in
   [
     # hardware specific
@@ -102,7 +106,7 @@
     gcc
     gnumake
     python311Packages.pygments
-    vscode
+    unstable.vscode
     unstable.zed-editor
     alejandra
     spotify

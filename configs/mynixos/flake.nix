@@ -10,25 +10,36 @@
     };
   };
 
-  outputs = {
+  outputs = inputs@{
+    self,
     nixpkgs,
+    nixpkgs-unstable,
     nixos-hardware,
     nixos-06cb-009a-fingerprint-sensor,
     ...
-  } @ inputs: {
+  }: {
     # Einstein desktop
     nixosConfigurations.einstein = nixpkgs.lib.nixosSystem {
       specialArgs = { inherit inputs; };
       modules = [
+        ./modules/nixos/common.nix
         ./hosts/einstein/configuration.nix
       ];
     };
     
     # Thinkpad T480S
-    nixosConfigurations.eris = nixpkgs.lib.nixosSystem {
-      specialArgs = { inherit inputs; };
+    nixosConfigurations.eris = nixpkgs.lib.nixosSystem rec {
+      system = "x86_64-linux";
+      specialArgs = {
+        inherit inputs;
+        # nixpkgs-unstable = import nixpkgs-unstable {
+        #   inherit system;
+        #   config.allowUnfree = true;
+        # };
+      };
       modules = [
         nixos-hardware.nixosModules.lenovo-thinkpad-t480s
+        ./modules/nixos/common.nix
         ./hosts/eris/configuration.nix
       ];
     };
@@ -37,6 +48,7 @@
     nixosConfigurations.orcus = nixpkgs.lib.nixosSystem {
       specialArgs = { inherit inputs; };
       modules = [
+        ./modules/nixos/common.nix
         ./hosts/orcus/configuration.nix
       ];
     };
