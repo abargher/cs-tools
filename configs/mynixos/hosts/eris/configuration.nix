@@ -121,5 +121,6 @@
     ncurses
     tree
     kitty
+    slack
   ];
 }
