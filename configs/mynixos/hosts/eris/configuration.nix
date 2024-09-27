@@ -27,6 +27,10 @@
     wayland.enable = true;
   };
   services.desktopManager.plasma6.enable = true;
+  security.pam.services.kwallet = {
+    name = "kwallet";
+    enableKwallet = true;
+  };
 
   # Configure keymap in X11
   services.xserver.xkb = {
