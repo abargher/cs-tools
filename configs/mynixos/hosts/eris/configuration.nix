@@ -95,9 +95,18 @@
     fprintd
 
     # hyprland
+    kitty
+    rofi # pick one of rofi/wofi?
     wofi
     waybar
     hyprpaper
+    hypridle
+    hyprlock
+    waypaper
+    pywal
+    grim
+    slurp
+    wlogout
     networkmanagerapplet
     font-awesome
 
@@ -127,7 +136,6 @@
     gmp
     ncurses
     tree
-    kitty
     slack
     htop
   ];
