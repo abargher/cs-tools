@@ -94,6 +94,13 @@
     # hardware specific
     fprintd
 
+    # hyprland
+    wofi
+    waybar
+    hyprpaper
+    networkmanagerapplet
+    font-awesome
+
     # common packages
     vim-full
     tmux
