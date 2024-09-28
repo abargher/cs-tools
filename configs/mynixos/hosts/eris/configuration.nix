@@ -75,7 +75,7 @@
         custom = "~/CMSC/cs-tools/configs/oh-my-zsh-custom";
       };
     };
-    
+
     hyprland = {
       enable = true;
       xwayland.enable = true;
@@ -129,5 +129,6 @@
     tree
     kitty
     slack
+    htop
   ];
 }
