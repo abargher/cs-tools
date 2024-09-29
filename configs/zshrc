@@ -116,6 +116,7 @@ export EDITOR="vim"
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+
 export DOTNET_CLI_TELEMETRY_OPTOUT=1
 export CLICOLOR=1
 export PATH=$PATH:~/CMSC/cs-tools/tools:~/CMSC/cs-tools/scripts-zsh

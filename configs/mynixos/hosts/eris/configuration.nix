@@ -138,5 +138,6 @@
     tree
     slack
     htop
+    kdePackages.plasma-nm
   ];
 }
