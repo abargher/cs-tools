@@ -109,6 +109,7 @@
     wlogout
     networkmanagerapplet
     font-awesome
+    kwallet-pam
 
     # common packages
     vim-full
