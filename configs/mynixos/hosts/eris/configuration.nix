@@ -133,6 +133,7 @@
     xdg-desktop-portal-gtk
     adw-gtk3
     nwg-look
+    adwaita-qt
 
     # common packages
     vim-full
