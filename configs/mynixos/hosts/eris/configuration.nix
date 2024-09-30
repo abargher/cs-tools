@@ -132,6 +132,7 @@
     dunst
     xdg-desktop-portal-gtk
     adw-gtk3
+    nwg-look
 
     # common packages
     vim-full
