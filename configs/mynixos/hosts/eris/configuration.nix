@@ -75,6 +75,7 @@
         settings = with lib.gvariant; {
           "org/gnome/desktop/interface".color-scheme = "prefer-dark";
           "org/gnome/desktop/interface".gtk-theme = "Adwaita";
+          "org/gnome/desktop/interface".cursor-theme = "Adwaita";
         };
       }];
     };
