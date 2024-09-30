@@ -69,14 +69,14 @@
   programs = {
     firefox.enable = true;
 
-    # dconf.enable = true;
-    # dconf.profiles = {
-    #   user.databases = [{
-    #     settings = with lib.gvariant; {
-    #       "org/gnome/desktop/interface".color-scheme = "prefer-dark";
-    #     };
-    #   }];
-    # };
+    dconf.enable = true;
+    dconf.profiles = {
+      user.databases = [{
+        settings = with lib.gvariant; {
+          "org/gnome/desktop/interface".color-scheme = "prefer-dark";
+        };
+      }];
+    };
 
 
     # zsh config
