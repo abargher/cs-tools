@@ -6,7 +6,7 @@
 set -e
 
 # Go to config directory
-pushd ~/CMSC/cs-tools/configs/mynixos/
+pushd ~/CMSC/cs-tools/configs/mynixos/hosts/$(hostname)
 
 $EDITOR configuration.nix
 

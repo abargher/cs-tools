@@ -30,7 +30,6 @@
     enable = true;
     libraries = with pkgs; [
       # add missing dynamic libraries for unpackaged programs here
-      # NOT in environment.systemPackages
     ];
   };
 
@@ -38,8 +37,7 @@
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
 
-  networking.hostName = "nixos"; # Define your hostname.
-  # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
+  networking.hostName = "einstein"; # Define your hostname.
 
   # Enable networking
   networking.networkmanager.enable = true;
@@ -153,7 +151,7 @@
   };
 
   programs = {
-    # Zsh config
+    # zsh config
     zsh = {
       enable = true;
       ohMyZsh = {
@@ -162,14 +160,10 @@
       };
     };
 
-    # Install firefox.
-    firefox = {
-      enable = true;
-    };
-
     hyprland = {
       enable = true;
     };
+    firefox.enable = true;
   };
 
   # Allow unfree packages
