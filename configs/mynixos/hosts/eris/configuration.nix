@@ -100,6 +100,8 @@
 
     # GNOME
     gnome.adwaita-icon-theme
+    gtk3
+    gtk4
 
     # hyprland
     kitty
