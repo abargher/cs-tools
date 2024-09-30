@@ -69,6 +69,8 @@
   programs = {
     firefox.enable = true;
 
+    dconf.enable = true;
+
     # zsh config
     zsh = {
       enable = true;
@@ -95,6 +97,9 @@
   [
     # hardware specific
     fprintd
+
+    # GNOME
+    gnome.adwaita-icon-theme
 
     # hyprland
     kitty
