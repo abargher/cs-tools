@@ -128,6 +128,7 @@
     font-awesome
     kwallet-pam
     dunst
+    xdg-desktop-portal-gtk
 
     # common packages
     vim-full
