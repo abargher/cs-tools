@@ -2,7 +2,7 @@
 # your system.  Help is available in the configuration.nix(5) man page
 # and in the NixOS manual (accessible by running ‘nixos-help’).
 
-{ config, pkgs, unstable-pkgs, inputs, ... }:
+{ config, lib, pkgs, unstable-pkgs, inputs, ... }:
 
 {
   _module.args.unstable-pkgs = import inputs.nixpkgs-unstable {
@@ -70,6 +70,14 @@
     firefox.enable = true;
 
     dconf.enable = true;
+    dconf.profiles = {
+      user.databases = [{
+        settings = with lib.gvariant; {
+          "org/gnome/desktop/interface".color-scheme = "prefer-dark";
+        };
+      }];
+    };
+
 
     # zsh config
     zsh = {
