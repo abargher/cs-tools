@@ -160,6 +160,9 @@
       };
     };
 
+    hyprland = {
+      enable = true;
+    };
     firefox.enable = true;
   };
 
@@ -195,6 +198,7 @@
     spotify
     discord
     dunst
+    kitty
   ];
 
   # fonts
