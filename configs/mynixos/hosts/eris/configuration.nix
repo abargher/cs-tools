@@ -19,18 +19,20 @@
 
   # Enable the X11 windowing system.
   # You can disable this if you're only using the Wayland session.
-  # services.xserver.enable = true;
+  services.xserver.enable = true;
 
-  # Enable the KDE Plasma Desktop Environment.
-  services.displayManager.sddm = {
+  # Enable the GNOME Desktop Environment.
+  # services.displayManager.defaultSession = "Hyprland";
+  services.xserver.displayManager.gdm = {
     enable = true;
-    wayland.enable = true;
+    wayland = true;
   };
-  services.desktopManager.plasma6.enable = true;
-  security.pam.services.kwallet = {
-    name = "kwallet";
-    enableKwallet = true;
-  };
+  # services.desktopManager.plasma6.enable = true;
+  services.xserver.desktopManager.gnome.enable = true;
+  # security.pam.services.kwallet = {
+  #   name = "kwallet";
+  #   enableKwallet = true;
+  # };
 
   # Configure keymap in X11
   services.xserver.xkb = {
@@ -59,7 +61,7 @@
     description = "Alec";
     extraGroups = [ "networkmanager" "wheel" ];
     packages = with pkgs; [
-      kdePackages.kate
+      # user packages here
     ];
     shell = pkgs.zsh;
   };
@@ -140,6 +142,5 @@
     tree
     slack
     htop
-    kdePackages.plasma-nm
   ];
 }
