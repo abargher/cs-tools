@@ -135,6 +135,7 @@
     adw-gtk3
     nwg-look
     adwaita-qt
+    rose-pine-gtk-theme
 
     # common packages
     vim-full
