@@ -110,6 +110,7 @@
     networkmanagerapplet
     font-awesome
     kwallet-pam
+    dunst
 
     # common packages
     vim-full
