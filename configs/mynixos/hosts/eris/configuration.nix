@@ -129,6 +129,7 @@
     kwallet-pam
     dunst
     xdg-desktop-portal-gtk
+    adw-gtk3
 
     # common packages
     vim-full
