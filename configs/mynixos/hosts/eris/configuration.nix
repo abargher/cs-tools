@@ -121,6 +121,7 @@
     hyprpaper
     hypridle
     hyprlock
+    hyprcursor
     waypaper
     pywal
     grim
