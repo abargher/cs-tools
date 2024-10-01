@@ -144,6 +144,9 @@
     pavucontrol
     blueberry
     playerctl
+    mpc-cli
+    mpd
+    sonata
 
     # python
     (python3.withPackages (python-pkgs: with python-pkgs; [
