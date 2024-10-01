@@ -147,6 +147,8 @@
       pygobject3
       gst-python
       pygments
+      pip
+      virtualenv
     ]))
 
     # common packages
