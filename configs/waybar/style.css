@@ -29,9 +29,11 @@ window#waybar {
     margin-right: 12px;
 }
 
+#bluetooth,
 #battery,
 #pulseaudio,
 #backlight,
+#network,
 #custom-weather {
     color: @color5; /* color5 */
     background-color: @background; /* background */
@@ -39,7 +41,7 @@ window#waybar {
     padding: 0 15px 0 15px; /* top, right, bottom, left */
 }
 
-#network {
+#tray{
     color: @color2; /* color2 */
     background-color: @background; /* background */
     margin: 0 0px 0 0px;
