@@ -151,7 +151,7 @@
     neofetch
     fzf
     zoxide
-    python3
+    python3Full
     cmake
     clang
     gcc

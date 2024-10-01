@@ -1,7 +1,7 @@
 {
   "layer": "top",
   "position": "top",
-  "margin-top": 3,
+  "margin-top": 1,
   "modules-left": ["clock", "custom/weather"],
   "modules-center": ["hyprland/workspaces", "custom/media"],
   "modules-right": [
