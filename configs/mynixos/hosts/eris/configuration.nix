@@ -136,6 +136,7 @@
     nwg-look
     adwaita-qt
     rose-pine-gtk-theme
+    brightnessctl
 
     # common packages
     vim-full
