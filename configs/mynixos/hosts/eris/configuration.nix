@@ -166,5 +166,6 @@
     tree
     slack
     htop
+    killall
   ];
 }
