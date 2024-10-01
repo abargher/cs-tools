@@ -62,6 +62,9 @@
     extraGroups = [ "networkmanager" "wheel" ];
     packages = with pkgs; [
       # user packages here
+      python311Packages.pygments
+      python311Packages.pygobject3
+      python311Packages.pygobject-stubs
     ];
     shell = pkgs.zsh;
   };
@@ -166,9 +169,6 @@
     clang
     gcc
     gnumake
-    python311Packages.pygments
-    python311Packages.pygobject3
-    python311Packages.pygobject-stubs
     unstable.vscode
     unstable.zed-editor
     alejandra
