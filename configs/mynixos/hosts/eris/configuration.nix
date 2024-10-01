@@ -150,6 +150,7 @@
       pygobject3
       pygobject-stubs
       gst-python
+      gtk3
       pygments
       pip
       virtualenv
