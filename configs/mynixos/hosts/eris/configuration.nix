@@ -188,5 +188,6 @@
     htop
     killall
     nodejs_22
+    processing
   ];
 }
