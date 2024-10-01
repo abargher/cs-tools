@@ -2,7 +2,7 @@
   "layer": "top",
   "position": "top",
   "margin-top": 1,
-  "modules-left": ["clock", "custom/weather"],
+  "modules-left": ["clock", "custom/weather", "cpu", "memory"],
   "modules-center": ["hyprland/workspaces", "custom/media"],
   "modules-right": [
     "pulseaudio",
@@ -25,6 +25,16 @@
   //   "on-scroll-down": "playerctl previous",
   //   "exec": "$HOME/.config/waybar/scripts/mediaplayer.py 2> /dev/null" // Script in resources/custom_modules folder
   // },
+  "memory": {
+    "interval": 5,
+    "format": "Mem {}%"
+  },
+
+  "cpu": {
+    "interval": 5,
+    "format": "  {usage:2}%"
+  },
+
   "custom/mpd": {
     "format": "♪ {}",
     //"max-length": 15,
@@ -112,10 +122,10 @@
   },
 
   "bluetooth": {
-
     "on-click": "blueberry",
-
-    "format": " {status}",
-
+    "format-on": "",
+    "format-off": "󰂲",
+    "format-disabled": "󰂲",
+    "format-connected": "󰂱",
   },
 }
