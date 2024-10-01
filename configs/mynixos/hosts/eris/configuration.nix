@@ -145,6 +145,7 @@
     # python
     (python3.withPackages (python-pkgs: with python-pkgs; [
       pygobject3
+      pygobject-stubs
       gst-python
       pygments
       pip
@@ -166,6 +167,8 @@
     gcc
     gnumake
     python311Packages.pygments
+    python311Packages.pygobject3
+    python311Packages.pygobject-stubs
     unstable.vscode
     unstable.zed-editor
     alejandra
