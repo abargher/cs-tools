@@ -187,5 +187,6 @@
     slack
     htop
     killall
+    nodejs_22
   ];
 }
