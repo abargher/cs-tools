@@ -141,6 +141,13 @@
     pavucontrol
     blueberry
 
+    # python
+    (python3.withPackages (python-pkgs: with python-pkgs; [
+      pygobject3
+      gst-python
+      pygments
+    ]))
+
     # common packages
     vim-full
     tmux
@@ -151,14 +158,11 @@
     neofetch
     fzf
     zoxide
-    python3Full
     cmake
     clang
     gcc
     gnumake
     python311Packages.pygments
-    python311Packages.pygobject3
-    python311Packages.gst-python
     unstable.vscode
     unstable.zed-editor
     alejandra
