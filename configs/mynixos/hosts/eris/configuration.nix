@@ -155,6 +155,8 @@
     gcc
     gnumake
     python311Packages.pygments
+    python311Packages.pygobject3
+    python311Packages.gst-python
     unstable.vscode
     unstable.zed-editor
     alejandra
