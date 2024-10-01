@@ -137,6 +137,7 @@
     adwaita-qt
     rose-pine-gtk-theme
     brightnessctl
+    pavucontrol
 
     # common packages
     vim-full
