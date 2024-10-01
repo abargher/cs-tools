@@ -140,6 +140,7 @@
     brightnessctl
     pavucontrol
     blueberry
+    playerctl
 
     # python
     (python3.withPackages (python-pkgs: with python-pkgs; [
