@@ -75,6 +75,7 @@
         settings = with lib.gvariant; {
           "org/gnome/desktop/interface".color-scheme = "prefer-dark";
           "org/gnome/desktop/interface".gtk-theme = "rose-pine-gtk";
+          "org/gnome/desktop/interface".icon-theme = "rose-pine-icons";
           "org/gnome/desktop/interface".cursor-theme = "Adwaita";
         };
       }];
