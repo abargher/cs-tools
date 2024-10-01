@@ -162,6 +162,7 @@
     git
     file
     google-chrome
+    gobject-introspection
     neofetch
     fzf
     zoxide
