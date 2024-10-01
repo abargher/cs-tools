@@ -139,6 +139,7 @@
     rose-pine-gtk-theme
     brightnessctl
     pavucontrol
+    blueberry
 
     # common packages
     vim-full

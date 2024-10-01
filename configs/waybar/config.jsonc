@@ -4,7 +4,14 @@
   "margin-top": 3,
   "modules-left": ["clock", "custom/weather"],
   "modules-center": ["hyprland/workspaces", "custom/media"],
-  "modules-right": ["pulseaudio", "backlight", "battery", "network"],
+  "modules-right": [
+    "pulseaudio",
+    "backlight",
+    "battery",
+    "bluetooth",
+    "network",
+    "tray"
+  ],
 
   "custom/media": {
     "format": "{icon}{}",
@@ -82,4 +89,12 @@
     "tooltip": true,
     "interval": 3600
   }
+
+  "bluetooth": {
+
+    "on-click": "blueberry",
+
+    "format": " {status}",
+
+  },
 }
