@@ -119,7 +119,6 @@
 
     # hyprland
     kitty
-    rofi # pick one of rofi/wofi?
     wofi
     waybar
     hyprpaper
