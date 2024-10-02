@@ -20,6 +20,7 @@
 
   networking.firewall = {
     allowedUDPPorts = [ 51820 ];
+    allowedTCPPorts = [ 51820 ];
   };
 
   # enable wireguard
