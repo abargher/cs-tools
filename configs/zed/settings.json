@@ -72,7 +72,11 @@
         "Make": {
             "hard_tabs": true,
             "tab_size": 8
+        },
+        "JavaScript": {
+            "tab_size": 2
         }
+
     },
     "lsp": {
         // "rust-analyzer": {
