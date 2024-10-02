@@ -17,6 +17,11 @@
 
   networking.hostName = "eris";
 
+
+  networking.firewall = {
+    allowedUDPPorts = [ 51820 ];
+  };
+
   # enable wireguard
   # See https://nixos.wiki/wiki/WireGuard
   #networking.wireguard.interfaces = {
