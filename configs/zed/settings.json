@@ -49,14 +49,25 @@
     // Language overrides
     "languages": {
         "Python": {
+            "format_on_save": "on",
             "hard_tabs": false,
             "tab_size": 4,
-            "formatter": {
-                "external": {
+            "formatter": [
+                {"external": {
                     "command": "black",
-                    "arguments": ["-"]
-                }
-            }
+                    "arguments": [
+                        "--line-length",
+                        "80",
+                        "-"
+                    ]
+                }},
+                {"external" : {
+                    "command": "isort",
+                    "arguments": [
+                        "-"
+                    ]
+                }}
+            ]
         },
         "Rust": {
             "preferred_line_length": 100,
