@@ -1,5 +1,5 @@
 mode=drun
-allow_images=false
+allow_images=true
 image_size=30
 prompt= Search
 columns=1
