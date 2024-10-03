@@ -18,10 +18,10 @@
   networking.hostName = "eris";
 
 
-  networking.firewall = {
-    allowedUDPPorts = [ 51820 ];
-    allowedTCPPorts = [ 51820 ];
-  };
+  # networking.firewall = {
+  #   allowedUDPPorts = [ 51820 ];
+  #   allowedTCPPorts = [ 51820 ];
+  # };
 
   # enable wireguard
   # See https://nixos.wiki/wiki/WireGuard
@@ -183,7 +183,7 @@
     sonata
 
     # python
-    (python3.withPackages (python-pkgs: with python-pkgs; [
+    (unstable.python3.withPackages (python-pkgs: with python-pkgs; [
       pygobject3
       pygobject-stubs
       gst-python
@@ -191,6 +191,8 @@
       pygments
       pip
       virtualenv
+      black
+      isort
     ]))
 
     # common packages
