@@ -30,13 +30,7 @@
     # Thinkpad T480S
     nixosConfigurations.eris = nixpkgs.lib.nixosSystem rec {
       system = "x86_64-linux";
-      specialArgs = {
-        inherit inputs;
-        # nixpkgs-unstable = import nixpkgs-unstable {
-        #   inherit system;
-        #   config.allowUnfree = true;
-        # };
-      };
+      specialArgs = { inherit inputs; };
       modules = [
         nixos-hardware.nixosModules.lenovo-thinkpad-t480s
         ./modules/nixos/common.nix
