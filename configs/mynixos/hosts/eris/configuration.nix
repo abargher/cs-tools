@@ -97,9 +97,6 @@
     extraGroups = [ "networkmanager" "wheel" ];
     packages = with pkgs; [
       # user packages here
-      python311Packages.pygments
-      python311Packages.pygobject3
-      python311Packages.pygobject-stubs
     ];
     shell = pkgs.zsh;
   };
@@ -181,6 +178,7 @@
     mpc-cli
     mpd
     sonata
+    wireshark
 
     # python
     (unstable.python3.withPackages (python-pkgs: with python-pkgs; [
