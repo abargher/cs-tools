@@ -178,7 +178,6 @@
     mpc-cli
     mpd
     sonata
-    wireshark
 
     # python
     (unstable.python3.withPackages (python-pkgs: with python-pkgs; [
@@ -206,6 +205,7 @@
     zoxide
     cmake
     clang
+    libclang
     gcc
     gnumake
     unstable.vscode
@@ -223,5 +223,7 @@
     killall
     nodejs_22
     processing
+    wireshark
+    llvm
   ];
 }
