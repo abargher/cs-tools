@@ -225,5 +225,7 @@
     processing
     wireshark
     llvm
+    gimp-with-plugins
+    glow
   ];
 }
