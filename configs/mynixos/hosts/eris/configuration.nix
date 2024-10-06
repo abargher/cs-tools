@@ -191,6 +191,7 @@
       black
       isort
       pytest
+      pytest-json-report
     ]))
 
     # common packages
