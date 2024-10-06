@@ -1,0 +1,15 @@
+#!/usr/bin/env zsh
+
+MONTHDIR="$HOME/notes/$(date +%Y/%m)"
+mkdir -p $MONTHDIR &> /dev/null
+
+TODAY=$(date +%Y-%m-%d)
+NOTEFILE="$MONTHDIR/$TODAY.md"
+
+if ! [[ -f $NOTEFILE ]]; then
+    echo "# Notes for $TODAY" >> $NOTEFILE
+    echo "==================\n\n" >> $NOTEFILE
+fi
+
+vim $NOTEFILE -c ':$'
+
