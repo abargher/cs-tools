@@ -190,6 +190,7 @@
       virtualenv
       black
       isort
+      pytest
     ]))
 
     # common packages
