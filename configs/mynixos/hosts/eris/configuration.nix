@@ -229,5 +229,6 @@
     llvm
     gimp-with-plugins
     glow
+    zathura
   ];
 }
