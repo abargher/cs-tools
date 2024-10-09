@@ -134,6 +134,8 @@
   environment.sessionVariables.NIXOS_OZONE_WL = "1";
 
 
+  virtualisation.docker.enable = true;
+
   # List packages installed in system profile. To search, run:
   # $ nix search wget
   environment.systemPackages = with pkgs;
@@ -230,5 +232,6 @@
     gimp-with-plugins
     glow
     zathura
+    docker
   ];
 }
