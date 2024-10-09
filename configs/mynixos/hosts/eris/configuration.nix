@@ -233,5 +233,6 @@
     glow
     zathura
     docker
+    docker-client
   ];
 }
