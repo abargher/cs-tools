@@ -234,5 +234,6 @@
     zathura
     docker
     docker-client
+    valgrind
   ];
 }
