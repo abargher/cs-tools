@@ -11,6 +11,7 @@ syntax on
 set number
 set colorcolumn=81
 set belloff=all
+set termguicolors
 " Write current buffer if changed before navigating from Vim to tmux pane
 let g:tmux_navigator_save_on_switch = 1
 
@@ -95,6 +96,7 @@ call vundle#begin()
 Plugin 'VundleVim/Vundle.vim'
 
 """ User plugins go here:
+Plugin 'catppuccin/vim', { 'as': 'catppuccin' }
 Plugin 'valloric/youcompleteme'
 " YCM docs: https://github.com/ycm-core/YouCompleteMe?tab=readme-ov-file
 Plugin 'sheerun/vim-polyglot'
