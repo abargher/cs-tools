@@ -81,7 +81,7 @@
     fingerprint-module = inputs.nixos-06cb-009a-fingerprint-sensor;
   in
   {
-    enable = true;
+    enable = false;
     tod = {
       enable = true;
       driver = fingerprint-module.lib.libfprint-2-tod1-vfs0090-bingch {
