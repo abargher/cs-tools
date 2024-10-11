@@ -237,5 +237,6 @@
     valgrind
     gdb
     unstable.lldb
+    fswatch
   ];
 }
