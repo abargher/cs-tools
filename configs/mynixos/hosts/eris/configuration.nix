@@ -235,5 +235,7 @@
     docker
     docker-client
     valgrind
+    gdb
+    unstable.lldb
   ];
 }
