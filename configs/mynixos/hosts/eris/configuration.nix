@@ -136,6 +136,14 @@
 
   virtualisation.docker.enable = true;
 
+  programs.nix-ld = {
+    enable = true;
+    libraries = with pkgs; [
+      # add missing dynamic libraries for unpackages programs here
+      fswatch
+    ];
+  };
+
   # List packages installed in system profile. To search, run:
   # $ nix search wget
   environment.systemPackages = with pkgs;
