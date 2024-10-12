@@ -165,7 +165,7 @@
     waybar
     hyprpaper
     hypridle
-    hyprlock
+    unstable.hyprlock
     hyprcursor
     waypaper
     pywal
