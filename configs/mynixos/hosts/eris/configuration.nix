@@ -246,5 +246,6 @@
     gdb
     unstable.lldb
     fswatch
+    inetutils
   ];
 }
