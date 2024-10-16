@@ -247,5 +247,6 @@
     unstable.lldb
     fswatch
     inetutils
+    pico-sdk
   ];
 }
