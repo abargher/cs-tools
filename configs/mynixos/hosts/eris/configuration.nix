@@ -142,6 +142,7 @@
       # add missing dynamic libraries for unpackages programs here
       fswatch
       libstdcxx5
+      libgcc
     ];
   };
 
