@@ -131,7 +131,9 @@
       xwayland.enable = true;
     };
   };
-  environment.sessionVariables.NIXOS_OZONE_WL = "1";
+  environment.sessionVariables = {
+    NIXOS_OZONE_WL = "1";
+  };
 
 
   virtualisation.docker.enable = true;
@@ -204,6 +206,7 @@
       isort
       pytest
       pytest-json-report
+      pyzmq
     ]))
 
     # common packages
