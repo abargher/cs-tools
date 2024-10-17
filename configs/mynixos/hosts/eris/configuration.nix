@@ -248,5 +248,6 @@
     fswatch
     inetutils
     pico-sdk
+    libreoffice-fresh
   ];
 }
