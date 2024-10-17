@@ -94,7 +94,7 @@
   users.users.alec = {
     isNormalUser = true;
     description = "Alec";
-    extraGroups = [ "networkmanager" "wheel" ];
+    extraGroups = [ "networkmanager" "wheel" "docker" ];
     packages = with pkgs; [
       # user packages here
     ];
