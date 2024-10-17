@@ -141,6 +141,7 @@
     libraries = with pkgs; [
       # add missing dynamic libraries for unpackages programs here
       fswatch
+      libstdcxx5
     ];
   };
 
