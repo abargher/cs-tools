@@ -114,7 +114,7 @@
   },
 
   "custom/weather": {
-    "exec": "${HOME}/.config/waybar/scripts/get_weather.sh Chicago+Illinois",
+    "exec": "${HOME}/.config/waybar/scripts/get_weather.sh Chicago",
     "return-type": "json",
     "format": "{}",
     "tooltip": true,

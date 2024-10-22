@@ -81,7 +81,7 @@
     fingerprint-module = inputs.nixos-06cb-009a-fingerprint-sensor;
   in
   {
-    enable = true;
+    enable = false;
     tod = {
       enable = true;
       driver = fingerprint-module.lib.libfprint-2-tod1-vfs0090-bingch {
@@ -94,7 +94,7 @@
   users.users.alec = {
     isNormalUser = true;
     description = "Alec";
-    extraGroups = [ "networkmanager" "wheel" ];
+    extraGroups = [ "networkmanager" "wheel" "docker" ];
     packages = with pkgs; [
       # user packages here
     ];
@@ -131,10 +131,22 @@
       xwayland.enable = true;
     };
   };
-  environment.sessionVariables.NIXOS_OZONE_WL = "1";
+  environment.sessionVariables = {
+    NIXOS_OZONE_WL = "1";
+  };
 
 
   virtualisation.docker.enable = true;
+
+  programs.nix-ld = {
+    enable = true;
+    libraries = with pkgs; [
+      # add missing dynamic libraries for unpackages programs here
+      fswatch
+      libstdcxx5
+      libgcc
+    ];
+  };
 
   # List packages installed in system profile. To search, run:
   # $ nix search wget
@@ -157,7 +169,7 @@
     waybar
     hyprpaper
     hypridle
-    hyprlock
+    unstable.hyprlock
     hyprcursor
     waypaper
     pywal
@@ -194,6 +206,7 @@
       isort
       pytest
       pytest-json-report
+      pyzmq
     ]))
 
     # common packages
@@ -234,5 +247,15 @@
     zathura
     docker
     docker-client
+    valgrind
+    gdb
+    unstable.lldb
+    fswatch
+    inetutils
+    pico-sdk
+    libreoffice-fresh
+    protobuf
+    protobufc
+    criterion
   ];
 }
