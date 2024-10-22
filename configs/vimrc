@@ -4,6 +4,7 @@ set tabstop=4
 set shiftwidth=4
 set expandtab
 set smartcase
+set hlsearch
 autocmd FileType make set tabstop=8 shiftwidth=8 softtabstop=0 noexpandtab
 autocmd FileType haskell set tabstop=2 shiftwidth=2
 autocmd FileType sml set tabstop=2 shiftwidth=2
@@ -16,6 +17,9 @@ let g:tmux_navigator_save_on_switch = 1
 
 "" Plugin settings
 nnoremap <C-p> :NERDTreeToggle<CR>
+
+"This unsets the "last search pattern" register by hitting return
+nnoremap <CR> :noh<CR><CR>
 
 " Indentation mappings
 nmap >> <Nop>
