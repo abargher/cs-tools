@@ -254,5 +254,8 @@
     inetutils
     pico-sdk
     libreoffice-fresh
+    protobuf
+    protobufc
+    criterion
   ];
 }
