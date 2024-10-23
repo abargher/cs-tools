@@ -11,7 +11,9 @@ pushd ~/CMSC/cs-tools/configs/mynixos/hosts/$(hostname)
 $EDITOR configuration.nix
 
 # Quit if no changes
-if git diff --quiet '*.nix'; then
+if git diff --quiet '*.nix' && \
+    git diff --quiet '../../flake.lock' && \
+    git diff --quiet '../../flake.nix'; then
     echo "No changes detected, exiting."
     popd
     exit 0
