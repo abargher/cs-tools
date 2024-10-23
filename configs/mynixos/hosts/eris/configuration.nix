@@ -257,5 +257,6 @@
     protobuf
     protobufc
     criterion
+    nixd
   ];
 }
