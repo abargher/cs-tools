@@ -145,6 +145,7 @@
       fswatch
       libstdcxx5
       libgcc
+      pico-sdk
     ];
   };
 
