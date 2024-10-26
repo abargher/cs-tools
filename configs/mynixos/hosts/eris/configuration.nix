@@ -258,5 +258,6 @@
     protobufc
     criterion
     nixd
+    minicom
   ];
 }
