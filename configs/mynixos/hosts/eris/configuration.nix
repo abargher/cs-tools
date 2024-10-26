@@ -147,6 +147,7 @@
       libgcc
       pico-sdk
       systemdLibs
+      platformio-core
     ];
   };
 
