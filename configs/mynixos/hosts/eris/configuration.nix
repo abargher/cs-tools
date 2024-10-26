@@ -146,6 +146,7 @@
       libstdcxx5
       libgcc
       pico-sdk
+      systemdLibs
     ];
   };
 
