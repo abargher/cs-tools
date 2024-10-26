@@ -228,7 +228,7 @@
     libclang
     gcc
     gnumake
-    unstable.vscode-with-extensions
+    unstable.vscode
     unstable.zed-editor
     alejandra
     spotify
