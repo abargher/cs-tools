@@ -262,5 +262,6 @@
     criterion
     nixd
     minicom
+    unzip
   ];
 }
