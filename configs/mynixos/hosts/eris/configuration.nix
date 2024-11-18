@@ -148,6 +148,8 @@
       pico-sdk
       systemdLibs
       platformio-core
+      protobufc
+      protobuf
     ];
   };
 
