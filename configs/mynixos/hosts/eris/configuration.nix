@@ -264,6 +264,6 @@
     minicom
     unzip
     unityhub
-    unstable.protobufc
+    protobufc
   ];
 }
