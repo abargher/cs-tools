@@ -265,5 +265,6 @@
     unzip
     unityhub
     protobufc
+    protobuf
   ];
 }
