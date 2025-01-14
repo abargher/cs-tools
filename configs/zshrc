@@ -144,6 +144,7 @@ alias lsl="ls -alh"
 alias tools="cd ~/CMSC/cs-tools"
 alias today="date +%Y-%m-%d"
 alias openpdf="nohup zathura"
+alias gcc=gcc-14
 
 function watchglow {
     fswatch -0 --event Updated -n -o $1 | xargs -0 -n 1 -I {} clearglow $1

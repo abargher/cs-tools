@@ -8,6 +8,11 @@
 // from the command palette or from `Zed` application menu.
 {
     // AI assistant
+    "inline_completions": {
+        "disabled_globs": [
+            ".env"
+        ]
+    },
     "assistant": {
         "default_model": {
             "provider": "zed.dev",
@@ -41,6 +46,13 @@
     "autosave": "on_window_change",
     "format_on_save": "off",
 
+    "inlay_hints": {
+      "enabled": true,
+      "show_type_hints": true,
+      "show_parameter_hints": true,
+      "show_other_hints": true
+    },
+
     "telemetry": {
         "diagnostics": false,
         "metrics": false
@@ -48,7 +60,13 @@
 
     // Language overrides
     "languages": {
+        "Go": {
+            "show_inline_completions": false,
+            "format_on_save": "on"
+        },
         "Python": {
+            "language_servers": ["!pylsp", "..."],
+            "show_inline_completions": false,
             "format_on_save": "on",
             "hard_tabs": false,
             "tab_size": 4,
@@ -97,13 +115,20 @@
         //         }
         //     }
         // },
+        // "pylsp": {
+        //    "settings" : {
+        //        "python" : {
+        //         "pythonPath": "venv/bin/python"
+        //        }
+        //    }
+        // },
         "pyright": {
             "settings": {
-                "python.analysis": {
-                    "diagnosticMode": "workspace",
-                    "typeCheckingMode": "strict"
-                },
-                "python": {
+                "python":{
+                    "analysis": {
+                        "diagnosticMode": "workspace",
+                        "typeCheckingMode": "strict"
+                    },
                     "pythonPath": "venv/bin/python"
                 }
             }
