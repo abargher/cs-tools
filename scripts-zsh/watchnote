@@ -1,4 +1,5 @@
 #!/usr/bin/env zsh
+source ~/.zshaliases
 
 NOTES_DIR="$HOME/notes/$(date +%Y/%m)"
 TODAY=$(date +%Y-%m-%d)
@@ -10,5 +11,4 @@ if [ ! -f $FILE ]; then
 fi
 
 clear
-glow $FILE
-
+watchglow $FILE
