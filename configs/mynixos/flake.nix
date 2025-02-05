@@ -26,7 +26,7 @@
         ./hosts/einstein/configuration.nix
       ];
     };
-    
+
     # Thinkpad T480S
     nixosConfigurations.eris = nixpkgs.lib.nixosSystem rec {
       system = "x86_64-linux";
