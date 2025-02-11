@@ -17,6 +17,7 @@ alias gcc=gcc-14
 alias t=tmux
 alias ta="tmux a"
 alias tas="tmux a -t"
+alias tls="tmux ls"
 
 function watchglow {
     fswatch -0 --event Updated -n -o $1 | xargs -0 -n 1 -I {} clearglow $1
