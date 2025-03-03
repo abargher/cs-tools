@@ -8,7 +8,7 @@
 // from the command palette or from `Zed` application menu.
 {
     // AI assistant
-    "inline_completions": {
+    "edit_predictions": {
         "disabled_globs": [
             ".env"
         ]
@@ -35,7 +35,7 @@
     },
 
     // Interface
-    "show_inline_completions": false, // AI completions
+    "show_edit_predictions": false, // AI completions
     "outline_panel": {
         "dock": "right"
     },
@@ -61,12 +61,12 @@
     // Language overrides
     "languages": {
         "Go": {
-            "show_inline_completions": false,
+            "show_edit_predictions": false,
             "format_on_save": "on"
         },
         "Python": {
             "language_servers": ["!pylsp", "..."],
-            "show_inline_completions": false,
+            "show_edit_predictions": false,
             "format_on_save": "on",
             "hard_tabs": false,
             "tab_size": 4,
