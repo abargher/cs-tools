@@ -44,7 +44,7 @@ git status
 
 # the commit message, if you supply "gitc ." then "." means No message
 msg="$*"
-if [ "$msg" == "." ]; then
+if [[ "$msg" == "." ]]; then
     msg="No message"
     echo "Existing.  Just checking, git pull, with 'gitc .' "
     exit
