@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/usr/bin/env zsh
 
 # A fast way (one line command) to run gitc commit with messages
 
@@ -18,7 +18,7 @@
 
 
 # no arg, mean this prints the instruction
-if [ $# == 0 ]; then 
+if [[ $# == 0 ]]; then
     echo ""
     echo "  Use : gitc <commit message in one line> "
     echo "  Ex  : gitc I added some new code "
@@ -56,7 +56,7 @@ git commit -a -m "$USER: $msg"
 
 # push
 echo "\n-------------------------------------- git push "
-git push 
+git push
 
 # git log HEAD
 echo "\n-------------------------------------- git log HEAD"
