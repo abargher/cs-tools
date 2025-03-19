@@ -276,5 +276,6 @@
     gnomeExtensions.wireguard-vpn-extension
     rustup
     unstable.go
+    unstable.kicad
   ];
 }
