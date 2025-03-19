@@ -277,5 +277,6 @@
     rustup
     unstable.go
     unstable.kicad
+    unstable.turbocase
   ];
 }
