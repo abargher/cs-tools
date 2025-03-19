@@ -275,5 +275,6 @@
     protobuf
     gnomeExtensions.wireguard-vpn-extension
     rustup
+    unstable.go
   ];
 }
