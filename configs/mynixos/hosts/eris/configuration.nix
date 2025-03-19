@@ -274,5 +274,6 @@
     protobufc
     protobuf
     gnomeExtensions.wireguard-vpn-extension
+    rustup
   ];
 }
