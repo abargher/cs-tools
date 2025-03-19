@@ -273,6 +273,6 @@
     unityhub
     protobufc
     protobuf
-    godot_4-mono
+    gnomeExtensions.wireguard-vpn-extension
   ];
 }
