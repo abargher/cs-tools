@@ -24,6 +24,7 @@
   # };
 
   # enable wireguard
+  networking.wireguard.enable = true;
   # See https://nixos.wiki/wiki/WireGuard
   #networking.wireguard.interfaces = {
   #  wg0 = {
