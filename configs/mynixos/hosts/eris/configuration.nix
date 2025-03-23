@@ -22,6 +22,8 @@
   #   allowedUDPPorts = [ 51820 ];
   #   allowedTCPPorts = [ 51820 ];
   # };
+  networking.firewall.checkReversePath = false;
+
 
   # enable wireguard
   networking.wireguard.enable = true;
