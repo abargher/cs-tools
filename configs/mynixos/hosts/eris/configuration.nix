@@ -272,6 +272,5 @@
     rustup
     unstable.kicad
     unstable.turbocase
-    # wg-netmanager
   ];
 }
