@@ -153,11 +153,6 @@
     ];
   };
 
-  # required for godot_4-mono while it still relies on dotnet-sdk_6
-  nixpkgs.config.permittedInsecurePackages = [
-    "dotnet-sdk-6.0.428"
-  ];
-
   # List packages installed in system profile. To search, run:
   # $ nix search wget
   environment.systemPackages = with pkgs;
@@ -249,7 +244,6 @@
     htop
     killall
     nodejs_22
-    processing
     wireshark
     llvm
     gimp-with-plugins
@@ -270,7 +264,6 @@
     nixd
     minicom
     unzip
-    unityhub
     protobufc
     protobuf
     gnomeExtensions.wireguard-vpn-extension
