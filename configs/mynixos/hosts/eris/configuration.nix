@@ -164,7 +164,7 @@
     fprintd
 
     # GNOME
-    gnome.adwaita-icon-theme
+    adwaita-icon-theme
     gtk3
     gtk4
 
@@ -231,7 +231,7 @@
     gcc
     gnumake
     unstable.vscode
-    unstable.zed-editor
+    #unstable.zed-editor
     alejandra
     spotify
     discord
