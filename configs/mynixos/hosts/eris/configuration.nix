@@ -273,5 +273,6 @@
     unstable.kicad
     unstable.turbocase
     openresolv
+    dig
   ];
 }
