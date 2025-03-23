@@ -267,8 +267,8 @@
     protobufc
     protobuf
     gnomeExtensions.wireguard-vpn-extension
-    # rustup
     unstable.go
+    rustup
     unstable.kicad
     unstable.turbocase
   ];
