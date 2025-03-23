@@ -231,7 +231,7 @@
     gcc
     gnumake
     unstable.vscode
-    #unstable.zed-editor
+    # unstable.zed-editor
     alejandra
     spotify
     discord
@@ -267,6 +267,7 @@
     protobufc
     protobuf
     gnomeExtensions.wireguard-vpn-extension
+    cargo-about
     rustup
     unstable.go
     unstable.kicad
