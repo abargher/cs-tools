@@ -273,6 +273,7 @@
     unstable.go
     rustup
     unstable.kicad
+    unstable.freecad-wayland
     unstable.turbocase
     openresolv
     dig
