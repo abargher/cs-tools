@@ -17,11 +17,6 @@
 
   networking.hostName = "eris";
 
-
-  # networking.firewall = {
-  #   allowedUDPPorts = [ 51820 ];
-  #   allowedTCPPorts = [ 51820 ];
-  # };
   networking.firewall.checkReversePath = false;
 
 
@@ -269,13 +264,11 @@
     unzip
     protobufc
     protobuf
-    gnomeExtensions.wireguard-vpn-extension
     unstable.go
     rustup
     unstable.kicad
     unstable.freecad-wayland
     unstable.turbocase
-    openresolv
     dig
   ];
 }
