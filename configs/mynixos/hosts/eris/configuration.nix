@@ -267,6 +267,7 @@
     unstable.go
     rustup
     unstable.kicad
+    unstable.arduino-ide
     unstable.freecad-wayland
     unstable.turbocase
     dig
