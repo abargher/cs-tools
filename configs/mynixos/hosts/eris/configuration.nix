@@ -271,5 +271,6 @@
     unstable.freecad-wayland
     unstable.turbocase
     dig
+    unstable.obs-studio
   ];
 }
