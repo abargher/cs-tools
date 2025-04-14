@@ -17,13 +17,11 @@
 
   networking.hostName = "eris";
 
+  networking.firewall.checkReversePath = false;
 
-  # networking.firewall = {
-  #   allowedUDPPorts = [ 51820 ];
-  #   allowedTCPPorts = [ 51820 ];
-  # };
 
   # enable wireguard
+  networking.wireguard.enable = true;
   # See https://nixos.wiki/wiki/WireGuard
   #networking.wireguard.interfaces = {
   #  wg0 = {
@@ -153,11 +151,6 @@
     ];
   };
 
-  # required for godot_4-mono while it still relies on dotnet-sdk_6
-  nixpkgs.config.permittedInsecurePackages = [
-    "dotnet-sdk-6.0.428"
-  ];
-
   # List packages installed in system profile. To search, run:
   # $ nix search wget
   environment.systemPackages = with pkgs;
@@ -169,7 +162,7 @@
     fprintd
 
     # GNOME
-    gnome.adwaita-icon-theme
+    adwaita-icon-theme
     gtk3
     gtk4
 
@@ -236,7 +229,7 @@
     gcc
     gnumake
     unstable.vscode
-    unstable.zed-editor
+    # unstable.zed-editor
     alejandra
     spotify
     discord
@@ -249,7 +242,6 @@
     htop
     killall
     nodejs_22
-    processing
     wireshark
     llvm
     gimp-with-plugins
@@ -270,9 +262,14 @@
     nixd
     minicom
     unzip
-    unityhub
     protobufc
     protobuf
-    godot_4-mono
+    unstable.go
+    rustup
+    unstable.kicad
+    unstable.arduino-ide
+    unstable.freecad-wayland
+    unstable.turbocase
+    dig
   ];
 }
