@@ -272,5 +272,7 @@
     unstable.turbocase
     dig
     unstable.obs-studio
+    xvfb
+    scrot
   ];
 }
