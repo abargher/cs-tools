@@ -210,6 +210,7 @@
       pytest
       pytest-json-report
       pyzmq
+      tkinter
     ]))
 
     # common packages
