@@ -197,21 +197,21 @@
     sonata
 
     # python
-    (python313Full.withPackages (python-pkgs: with python-pkgs; [
-      pygobject3
-      pygobject-stubs
-      gst-python
-      gtk3
-      pygments
-      pip
-      virtualenv
-      black
-      isort
-      pytest
-      pytest-json-report
-      pyzmq
-      tkinter
-    ]))
+    # (python313Full.withPackages (python-pkgs: with python-pkgs; [
+    #   pygobject3
+    #   pygobject-stubs
+    #   gst-python
+    #   gtk3
+    #   pygments
+    #   pip
+    #   virtualenv
+    #   black
+    #   isort
+    #   pytest
+    #   pytest-json-report
+    #   pyzmq
+    #   tkinter
+    # ]))
 
     # common packages
     vim-full
