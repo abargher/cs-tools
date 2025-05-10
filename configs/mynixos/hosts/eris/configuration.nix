@@ -272,7 +272,7 @@
     unstable.turbocase
     dig
     unstable.obs-studio
-    xvfb
+    xorg.xvfb
     scrot
   ];
 }
