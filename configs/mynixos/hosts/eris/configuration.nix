@@ -276,6 +276,5 @@
     xorg.xvfb
     xorg.xhost
     scrot
-    python312Packages.tkinter
   ];
 }
