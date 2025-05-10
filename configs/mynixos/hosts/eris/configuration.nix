@@ -273,6 +273,7 @@
     dig
     unstable.obs-studio
     xorg.xvfb
+    xorg.xhost
     scrot
   ];
 }
