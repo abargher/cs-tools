@@ -197,7 +197,7 @@
     sonata
 
     # python
-    (unstable.python313Full.withPackages (python-pkgs: with python-pkgs; [
+    (python313Full.withPackages (python-pkgs: with python-pkgs; [
       pygobject3
       pygobject-stubs
       gst-python
