@@ -277,5 +277,6 @@
     xorg.xvfb
     xorg.xhost
     scrot
+    audacity
   ];
 }
