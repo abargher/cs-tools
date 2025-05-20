@@ -7,27 +7,33 @@
 // custom settings, run the `open default settings` command
 // from the command palette or from `Zed` application menu.
 {
-    // AI assistant
-    "edit_predictions": {
-        "disabled_globs": [
-            ".env"
-        ]
-    },
+    // Line formatting
     "assistant": {
         "default_model": {
-            "provider": "zed.dev",
-            "model": "claude-3-5-sonnet-20240620"
+            "provider": "copilot_chat",
+            "model": "claude-3-7-sonnet"
         },
         "version": "2"
     },
-    // Line formatting
+    "ssh_connections": [
+    {
+      "host": "rose",
+      "projects": [
+        {
+          "paths": [
+            "~/CMSC/cs52072/modules"
+          ]
+        }
+      ]
+    }
+  ],
     "preferred_line_length": 80,
     "tab_size": 4,
     "soft_wrap": "preferred_line_length",
     "remove_trailing_whitespace_on_save": true,
 
     // Font features
-    "ui_font_family": "Zed Sans",
+    "ui_font_family": "Zed Plex Mono",
     "ui_font_size": 15,
     "buffer_font_size": 13,
     "buffer_font_features": {
@@ -47,7 +53,7 @@
     "format_on_save": "off",
 
     "inlay_hints": {
-      "enabled": true,
+      "enabled": false,
       "show_type_hints": true,
       "show_parameter_hints": true,
       "show_other_hints": true
@@ -61,12 +67,10 @@
     // Language overrides
     "languages": {
         "Go": {
-            "show_edit_predictions": false,
             "format_on_save": "on"
         },
         "Python": {
             "language_servers": ["!pylsp", "..."],
-            "show_edit_predictions": false,
             "format_on_save": "on",
             "hard_tabs": false,
             "tab_size": 4,
@@ -108,20 +112,6 @@
 
     },
     "lsp": {
-        // "rust-analyzer": {
-        //     "initialization_options": {
-        //         "checkOnSave": {
-        //             "command": "clippy" // rust-analyzer.checkOnSave.command
-        //         }
-        //     }
-        // },
-        // "pylsp": {
-        //    "settings" : {
-        //        "python" : {
-        //         "pythonPath": "venv/bin/python"
-        //        }
-        //    }
-        // },
         "pyright": {
             "settings": {
                 "python":{
