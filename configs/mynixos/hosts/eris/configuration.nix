@@ -141,7 +141,6 @@
     libraries = with pkgs; [
       # add missing dynamic libraries for unpackages programs here
       fswatch
-      libstdcxx
       libgcc
       pico-sdk
       systemdLibs
