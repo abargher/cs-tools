@@ -181,7 +181,7 @@
     wlogout
     networkmanagerapplet
     font-awesome
-    kwallet-pam
+    kdePackages.kwallet-pam
     dunst
     xdg-desktop-portal-gtk
     adw-gtk3
