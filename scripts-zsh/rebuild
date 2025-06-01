@@ -30,8 +30,8 @@ git diff -U0 '*.nix'
 echo "NixOS Rebuilding..."
 
 # Rebuild, output simplified errors, log tracebacks
-sudo nixos-rebuild switch --flake . 2>&1 | tee nixos-switch.log \
-    || (cat nixos-switch.log | grep --color error && exit 1)
+sudo nixos-rebuild switch --flake . &>nixos-switch.log || \
+    (cat nixos-switch.log | grep --color error && exit 1)
 
 # get current metadata
 current=$(nixos-rebuild list-generations |
@@ -42,6 +42,6 @@ git commit -am "NixOS Generation $current"
 
 popd
 
-# notify-send -e "NixOS Rebuilt OK!" --icon=software-update-available
+notify-send -e "NixOS Rebuilt OK!" --icon=software-update-available
 echo "NixOS Rebuilt OK!"
 

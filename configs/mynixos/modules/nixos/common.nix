@@ -76,10 +76,8 @@
 
   # fonts
   fonts.packages = with pkgs; [
-    (nerdfonts.override { fonts = [
-      "Hack"
-      "JetBrainsMono"
-    ]; })
+    nerd-fonts.hack
+    nerd-fonts.jetbrains-mono
   ];
 
 
