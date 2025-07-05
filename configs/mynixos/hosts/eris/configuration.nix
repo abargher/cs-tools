@@ -278,5 +278,6 @@
     scrot
     audacity
     rhythmbox
+    clementine
   ];
 }
