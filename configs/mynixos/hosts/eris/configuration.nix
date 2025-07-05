@@ -277,5 +277,6 @@
     xorg.xhost
     scrot
     audacity
+    rhythmbox
   ];
 }
