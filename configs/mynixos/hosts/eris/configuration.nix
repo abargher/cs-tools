@@ -278,6 +278,6 @@
     scrot
     audacity
     rhythmbox
-    clementine
+    unstable.clementine
   ];
 }
