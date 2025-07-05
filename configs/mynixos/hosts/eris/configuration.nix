@@ -278,6 +278,7 @@
     scrot
     audacity
     rhythmbox
+    libgpod
     unstable.clementine
   ];
 }
