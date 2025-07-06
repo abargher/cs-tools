@@ -54,18 +54,20 @@
   # You can disable this if you're only using the Wayland session.
   services.xserver.enable = true;
 
-  # Enable the GNOME Desktop Environment.
   # services.displayManager.defaultSession = "Hyprland";
-  services.xserver.displayManager.gdm = {
-    enable = true;
-    wayland = true;
-  };
-  # services.desktopManager.plasma6.enable = true;
-  services.xserver.desktopManager.gnome.enable = true;
-  # security.pam.services.kwallet = {
-  #   name = "kwallet";
-  #   enableKwallet = true;
+  services.xserver.displayManager.sddm.enable = true;
+  # services.xserver.displayManager.gdm = {
+  #   enable = true;
+  #   wayland = true;
   # };
+
+  # services.xserver.desktopManager.gnome.enable = true;
+
+  services.desktopManager.plasma6.enable = true;
+  security.pam.services.kwallet = {
+    name = "kwallet";
+    enableKwallet = true;
+  };
 
   # Configure keymap in X11
   services.xserver.xkb = {
