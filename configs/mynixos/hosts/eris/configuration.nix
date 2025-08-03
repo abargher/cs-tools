@@ -19,36 +19,8 @@
 
   networking.firewall.checkReversePath = false;
 
-
   # enable wireguard
   networking.wireguard.enable = true;
-  # See https://nixos.wiki/wiki/WireGuard
-  #networking.wireguard.interfaces = {
-  #  wg0 = {
-  #    ips = [ "10.66.66.5/24" "fd42:42:42::5/64" ];
-  #    listenPort = 51820;
-
-  #    privateKeyFile = ~/.config/wireguard/wireguard-privkey;
-
-  #    peers = [
-  #      {
-  #        # Public key of the server (not a file path).
-  #        publicKey = "YlodQU3QNzL6fqxH1kKun24/XmkXIymH36efWz5lHhs=";
-
-  #        # Forward all the traffic via VPN.
-  #        allowedIPs = [ "0.0.0.0/0" ];
-  #        # Or forward only particular subnets
-  #        #allowedIPs = [ "10.100.0.1" "91.108.12.0/22" ];
-
-  #        # Set this to the server IP and port.
-  #        endpoint = "73.209.174.2:51820";
-
-  #        # Send keepalives every 25 seconds. Keeps NAT tables alive.
-  #        persistentKeepalive = 25;
-  #      }
-  #    ];
-  #  };
-  #};
 
   # Enable the X11 windowing system.
   # You can disable this if you're only using the Wayland session.
@@ -56,12 +28,6 @@
 
   # services.displayManager.defaultSession = "Hyprland";
   services.xserver.displayManager.sddm.enable = true;
-  # services.xserver.displayManager.gdm = {
-  #   enable = true;
-  #   wayland = true;
-  # };
-
-  # services.xserver.desktopManager.gnome.enable = true;
 
   services.desktopManager.plasma6.enable = true;
   security.pam.services.kwallet = {
@@ -103,19 +69,6 @@
 
   programs = {
     firefox.enable = true;
-
-    dconf.enable = true;
-    dconf.profiles = {
-      user.databases = [{
-        settings = with lib.gvariant; {
-          "org/gnome/desktop/interface".color-scheme = "prefer-dark";
-          "org/gnome/desktop/interface".gtk-theme = "rose-pine-gtk";
-          "org/gnome/desktop/interface".icon-theme = "rose-pine-icons";
-          "org/gnome/desktop/interface".cursor-theme = "Adwaita";
-        };
-      }];
-    };
-
 
     # zsh config
     zsh = {
@@ -162,11 +115,6 @@
     # hardware specific
     fprintd
 
-    # GNOME
-    adwaita-icon-theme
-    gtk3
-    gtk4
-
     # hyprland
     kitty
     wofi
@@ -199,21 +147,6 @@
 
     # python
     python313Full
-    # (python313Full.withPackages (python-pkgs: with python-pkgs; [
-    #   pygobject3
-    #   pygobject-stubs
-    #   gst-python
-    #   gtk3
-    #   pygments
-    #   pip
-    #   virtualenv
-    #   black
-    #   isort
-    #   pytest
-    #   pytest-json-report
-    #   pyzmq
-    #   tkinter
-    # ]))
 
     # common packages
     vim-full
@@ -232,7 +165,7 @@
     gcc
     gnumake
     unstable.vscode
-    # unstable.zed-editor
+    unstable.zed-editor
     alejandra
     spotify
     discord
@@ -241,7 +174,6 @@
     gmp
     ncurses
     tree
-    slack
     htop
     killall
     nodejs_22
@@ -279,8 +211,5 @@
     xorg.xhost
     scrot
     audacity
-    rhythmbox
-    libgpod
-    unstable.clementine
   ];
 }
