@@ -5,6 +5,9 @@
 
 set -e
 
+# Exit alt-buff
+echo -ne "\033[?1049l"
+
 # Go to config directory
 pushd ~/CMSC/cs-tools/configs/mynixos/hosts/$(hostname)
 
@@ -27,21 +30,75 @@ alejandra .a &>/dev/null \
 # show changes
 git diff -U0 '*.nix'
 
-echo "NixOS Rebuilding..."
+echo -n "Rebuilding NixOS... "
+echo -ne "\033[?1049h\033[H" # enter alt-buff and clear
+echo "Rebuilding NixOS..."
 
-# Rebuild, output simplified errors, log tracebacks
-sudo nixos-rebuild switch --flake . &>nixos-switch.log || \
-    (cat nixos-switch.log | grep --color error && exit 1)
+set +o pipefail # Disable pipafail since we check ourselves
+# shellcheck disable=SC2024 #ah the irony
+sudo nixos-rebuild switch --show-trace --flake . 2>&1 | tee nixos-switch.log
+exit_code="${PIPESTATUS[0]}"
+set -o pipefail # Re-enable pipefail
 
-# get current metadata
-current=$(nixos-rebuild list-generations |
-          grep current | sed 's/ \+ /\t/g' | cut -f 1-4)
+# Check exit code of nixos-rebuild and act accordingly
+if [[ "${exit_code}" == 0 ]]; then
+    echo  -e "\n\033[34mNixOS rebuild completed\033[0m (code: $exit_code)"
+else
+    echo  -e "\n\033[31mNixOS rebuild failed\033[0m (code: $exit_code)"
+fi
 
-# Commit changes with generation metadata
-git commit -am "NixOS Generation $current"
+echo -ne "\rExit in 3" && sleep 1
+echo -ne "\rExit in 2" && sleep 1
+echo -ne "\rExit in 1" && sleep 1
+echo -ne "\033[2J\033[?1049l" # exit alt-buff
 
-popd
 
-notify-send -e "NixOS Rebuilt OK!" --icon=software-update-available
-echo "NixOS Rebuilt OK!"
+if [[ "${exit_code}" == 0 ]]; then
+    echo -e "Done\n"
+
+    ## Commit changes
+    if $had_changes; then
+        generation=$(sudo nix-env -p /nix/var/nix/profiles/system \
+            --list-generations | grep current | awk '{print $1}')
+        message="NixOS build ${generation}"
+        git commit -m "${message}"
+        echo -e "\n\n\033[32mCommitted as ${message}\033[0m"
+    fi
+
+    echo -e "\033[34mNixOS Rebuild Completed!\033[0m\n"
+    notify-send -e "NixOS Rebuilt OK!" --icon=software-update-available
+
+else
+    echo -e "\033[31mFailed\033[0m\n"
+
+    grep --color -F "error" .nixos-switch.log
+    if $had_changes; then
+        git restore --staged ..
+    fi
+
+    echo -ne "\n"
+
+    # shellcheck disable=SC2162
+    read -p 'Open log? (y/N): ' log_confirm
+    if [[ "${log_confirm}" == [yY] ]] || [[ "${log_confirm}" == [yY][eE][sS] ]]; then
+        vim -R .nixos-switch.log
+    fi
+fi
+
+
+# # Rebuild, output simplified errors, log tracebacks
+# sudo nixos-rebuild switch --flake . &>nixos-switch.log || \
+#     (cat nixos-switch.log | grep --color error && exit 1)
+
+# # get current metadata
+# current=$(nixos-rebuild list-generations |
+#           grep current | sed 's/ \+ /\t/g' | cut -f 1-4)
+
+# # Commit changes with generation metadata
+# git commit -am "NixOS Generation $current"
+
+# popd
+
+# notify-send -e "NixOS Rebuilt OK!" --icon=software-update-available
+# echo "NixOS Rebuilt OK!"
 
