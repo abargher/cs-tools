@@ -8,12 +8,11 @@
 // from the command palette or from `Zed` application menu.
 {
     // Line formatting
-    "assistant": {
+    "agent": {
         "default_model": {
             "provider": "copilot_chat",
             "model": "claude-3-7-sonnet"
         },
-        "version": "2"
     },
     "ssh_connections": [
     {
