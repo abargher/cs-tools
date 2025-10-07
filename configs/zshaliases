@@ -18,6 +18,7 @@ alias gcc=gcc-14
 alias t=tmux
 alias ta="tmux a"
 alias tas="tmux a -t"
+alias ts="tmux-session-dispensary.sh"
 alias tls="tmux ls"
 alias gits="git status"
 alias gitd="git diff"
