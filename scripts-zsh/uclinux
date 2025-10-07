@@ -1,2 +1,0 @@
-#!/bin/zsh
-ssh -t abargher@linux.cs.uchicago.edu 'cd CMSC/; exec $SHELL -l'
